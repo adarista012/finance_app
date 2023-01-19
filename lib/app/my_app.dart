@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'ui/routes/app_routes.dart';
 import 'ui/routes/routes.dart';
-
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       key: router.appKey,
       title: 'Hello world',
       navigatorKey: router.navigatorKey,
+      debugShowCheckedModeBanner: false,
       navigatorObservers: [
         router.observer,
       ],
@@ -21,6 +22,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('es'),
+        Locale('en'),
+        Locale('es_BO'),
+        Locale('en_BO'),
+        Locale('es_US'),
+        Locale('en_US'),
+      ],
+      // locale: Locale('es'),
     );
   }
 }

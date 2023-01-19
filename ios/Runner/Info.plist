@@ -51,5 +51,11 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>we need take a pic of description</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>we need use the camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>we need load a photo of a product or a description</string>
 </dict>
 </plist>

@@ -1,3 +1,4 @@
+import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_meedu/ui.dart';
@@ -19,9 +20,7 @@ class MyApp extends StatelessWidget {
       ],
       routes: appRoutes,
       initialRoute: Routes.HOME,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppColorsTheme.kThemeLight,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,

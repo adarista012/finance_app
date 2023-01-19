@@ -4,8 +4,10 @@ import 'package:intl/number_symbols.dart';
 import 'package:intl/number_symbols_data.dart';
 import 'app/my_app.dart';
 import 'dart:ui' as ui;
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
   if (ui.window.locale.countryCode?.isNotEmpty ?? false) { 
     Intl.defaultLocale =
         '${ui.window.locale.languageCode}_${ui.window.locale.countryCode}';
@@ -49,6 +51,11 @@ void main() {
     PERCENT_PATTERN: '#,##0\u00A0%',
     CURRENCY_PATTERN: '#,##0.00 \u00A4',
     DEF_CURRENCY_CODE: 'Bs.',
+  );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    name: 'antonio',
+    options: DefaultFirebaseOptions.currentPlatform,
   );
 
   runApp(const MyApp());

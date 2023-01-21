@@ -1,5 +1,6 @@
 import 'package:finance_app/app/ui/pages/home/controller/home_provider.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
+import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -21,11 +22,11 @@ class MyDismissible extends StatelessWidget {
             key: UniqueKey(),
             background: Container(
               padding: const EdgeInsets.only(right: 8.0),
-              color: Colors.red,
+              color: AppColorsTheme.red,
               alignment: Alignment.centerRight,
-              child: const Icon(
+              child: Icon(
                 Icons.delete_outline_outlined,
-                color: Colors.white,
+                color: AppColorsTheme.white,
               ),
             ),
             direction: DismissDirection.endToStart,
@@ -50,10 +51,10 @@ class MyDismissible extends StatelessWidget {
                       child: const Text("Delete")),
                   MaterialButton(
                     onPressed: () => Navigator.of(context).pop(false),
-                    child: const Text(
+                    child: Text(
                       "Cancel",
                       style: TextStyle(
-                        color: Colors.red,
+                        color: AppColorsTheme.red,
                       ),
                     ),
                   ),

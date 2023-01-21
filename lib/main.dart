@@ -10,20 +10,19 @@ import 'firebase_options.dart';
 import 'generated/translations.g.dart';
 
 Future<void> main() async {
-  
   WidgetsFlutterBinding.ensureInitialized();
   LocaleSettings.useDeviceLocale();
   await Firebase.initializeApp(
     name: 'antonio',
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
-  if (ui.window.locale.countryCode?.isNotEmpty ?? false) {
-    Intl.defaultLocale =
-        '${ui.window.locale.languageCode}_${ui.window.locale.countryCode}';
-  } else {
-    Intl.defaultLocale = ui.window.locale.languageCode;
+  final languageCode = ui.window.locale.languageCode;
+  final countryCode = ui.window.locale.countryCode;
+  String defaultLocale = languageCode;
+  if (countryCode != null) {
+    defaultLocale += '_$countryCode';
   }
+  Intl.defaultLocale = defaultLocale;
 
   numberFormatSymbols['es_BO'] = const NumberSymbols(
     NAME: "es_BO",
@@ -66,8 +65,6 @@ Future<void> main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-
- 
 
   runApp(
     TranslationProvider(

@@ -1,7 +1,9 @@
-import 'package:finance_app/generated/translations.g.dart';
+import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:finance_app/app/ui/pages/home/controller/home_controller.dart';
+import 'package:finance_app/generated/translations.g.dart';
+
 
 class MyHeader extends StatelessWidget {
   final HomeController controller;
@@ -32,18 +34,21 @@ class MyHeader extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            texts.home.total,
-            // 'Total of ${DateFormat('MMMM').format(DateTime.now())}',
-            style: const TextStyle(
-              color: Colors.white,
+            texts.home.total(
+              month: DateFormat('MMMM').format(
+                DateTime.now(),
+              ),
+            ),
+            style: TextStyle(
+              color: AppColorsTheme.white,
               fontSize: 24.0,
             ),
           ),
           RichText(
             text: TextSpan(
               text: NumberFormat.currency().format(controller.amount()),
-              style: const TextStyle(
-                color: Colors.white,
+              style: TextStyle(
+                color: AppColorsTheme.white,
                 fontSize: 32.0,
                 fontWeight: FontWeight.bold,
               ),

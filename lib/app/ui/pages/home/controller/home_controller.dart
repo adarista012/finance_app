@@ -9,8 +9,15 @@ import 'package:flutter_meedu/meedu.dart';
 import 'package:image_picker/image_picker.dart';
 
 class HomeController extends SimpleNotifier {
-  
   HomeController() {
+    _init();
+  }
+
+  void _init() {
+    getFirebaseExpenses();
+  }
+
+  void reload() {
     getFirebaseExpenses();
   }
 

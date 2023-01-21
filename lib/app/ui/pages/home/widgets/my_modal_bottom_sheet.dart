@@ -1,5 +1,6 @@
 
 import 'package:finance_app/app/ui/pages/home/controller/home_provider.dart';
+import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:image_picker/image_picker.dart';
@@ -64,7 +65,7 @@ class MyModalBottomSheet extends StatelessWidget {
                       ref.watch(homeProvider.select((_) => _.currentImage));
                   if(controller.currentImage == null){
                     return MaterialButton(
-                      color: Colors.grey[350],
+                      color: AppColorsTheme.grey,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
@@ -74,10 +75,13 @@ class MyModalBottomSheet extends StatelessWidget {
                         padding: EdgeInsets.zero,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             Text('Add photo  ',
-                            style: TextStyle(color: Colors.white),),
-                            Icon(Icons.add_a_photo_outlined, color: Colors.white,),
+                            style: TextStyle(
+                              color: AppColorsTheme.white,
+                              ),
+                            ),
+                            Icon(Icons.add_a_photo_outlined, color: AppColorsTheme.white,),
                           ],
                         ),
                       );
@@ -88,7 +92,7 @@ class MyModalBottomSheet extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             MaterialButton(
-                              color: Colors.grey[350],
+                              color: AppColorsTheme.grey,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
@@ -98,10 +102,13 @@ class MyModalBottomSheet extends StatelessWidget {
                               },
                               padding: const EdgeInsets.symmetric(horizontal: 16.0),
                               child: Row(
-                                children: const [
+                                children:[
                                   Text('Edit photo  ',
-                                  style: TextStyle(color: Colors.white),),
-                                  Icon(Icons.add_a_photo_outlined, color: Colors.white,),
+                                  style: TextStyle(
+                                    color: AppColorsTheme.white,
+                                    ),
+                                  ),
+                                  Icon(Icons.add_a_photo_outlined, color: AppColorsTheme.white,),
                                 ],
                               ),
                             ),
@@ -122,9 +129,11 @@ class MyModalBottomSheet extends StatelessWidget {
                   ),
                   minWidth: double.infinity,
                   color: Theme.of(context).primaryColor,
-                  child: const Text(
+                  child: Text(
                     'Save expense',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                      color: AppColorsTheme.white,
+                    ),
                   ),
                   onPressed: () {
                     if (homeProvider.read.currentPrice != 0 ||

@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 6
-/// Strings: 6 (1 per locale)
+/// Strings: 42 (7 per locale)
 ///
-/// Built on 2023-01-21 at 08:10 UTC
+/// Built on 2023-01-21 at 19:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -154,7 +154,23 @@ class _TranslationsEs implements BaseTranslations<AppLocale, _TranslationsEs> {
 	late final _TranslationsEs _root = this; // ignore: unused_field
 
 	// Translations
+	late final _TranslationsHomeDropDownButtonEs homeDropDownButton = _TranslationsHomeDropDownButtonEs._(_root);
 	late final _TranslationsHomeEs home = _TranslationsHomeEs._(_root);
+}
+
+// Path: homeDropDownButton
+class _TranslationsHomeDropDownButtonEs {
+	_TranslationsHomeDropDownButtonEs._(this._root);
+
+	final _TranslationsEs _root; // ignore: unused_field
+
+	// Translations
+	String get spanish => 'Español';
+	String get spanishBo => 'Español Bo';
+	String get spanishUs => 'Español US';
+	String get english => 'Inglés';
+	String get englishBo => 'Inglés Bo';
+	String get englishUs => 'Inglés US';
 }
 
 // Path: home
@@ -164,7 +180,7 @@ class _TranslationsHomeEs {
 	final _TranslationsEs _root; // ignore: unused_field
 
 	// Translations
-	String get total => 'total es';
+	String total({required Object month}) => 'Total en ${month} ';
 }
 
 // Path: <root>
@@ -192,7 +208,23 @@ class _TranslationsEn implements _TranslationsEs {
 	@override late final _TranslationsEn _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeDropDownButtonEn homeDropDownButton = _TranslationsHomeDropDownButtonEn._(_root);
 	@override late final _TranslationsHomeEn home = _TranslationsHomeEn._(_root);
+}
+
+// Path: homeDropDownButton
+class _TranslationsHomeDropDownButtonEn implements _TranslationsHomeDropDownButtonEs {
+	_TranslationsHomeDropDownButtonEn._(this._root);
+
+	@override final _TranslationsEn _root; // ignore: unused_field
+
+	// Translations
+	@override String get spanish => 'Spanish';
+	@override String get spanishBo => 'Spanish Bo';
+	@override String get spanishUs => 'Spanish US';
+	@override String get english => 'English';
+	@override String get englishBo => 'English Bo';
+	@override String get englishUs => 'English US';
 }
 
 // Path: home
@@ -202,7 +234,7 @@ class _TranslationsHomeEn implements _TranslationsHomeEs {
 	@override final _TranslationsEn _root; // ignore: unused_field
 
 	// Translations
-	@override String get total => 'total en';
+	@override String total({required Object month}) => 'Total of ${month} ';
 }
 
 // Path: <root>
@@ -230,7 +262,23 @@ class _TranslationsEnBo implements _TranslationsEs {
 	@override late final _TranslationsEnBo _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeDropDownButtonEnBo homeDropDownButton = _TranslationsHomeDropDownButtonEnBo._(_root);
 	@override late final _TranslationsHomeEnBo home = _TranslationsHomeEnBo._(_root);
+}
+
+// Path: homeDropDownButton
+class _TranslationsHomeDropDownButtonEnBo implements _TranslationsHomeDropDownButtonEs {
+	_TranslationsHomeDropDownButtonEnBo._(this._root);
+
+	@override final _TranslationsEnBo _root; // ignore: unused_field
+
+	// Translations
+	@override String get spanish => 'Spanish';
+	@override String get spanishBo => 'Spanish Bo';
+	@override String get spanishUs => 'Spanish US';
+	@override String get english => 'English';
+	@override String get englishBo => 'English Bo';
+	@override String get englishUs => 'English US';
 }
 
 // Path: home
@@ -240,7 +288,7 @@ class _TranslationsHomeEnBo implements _TranslationsHomeEs {
 	@override final _TranslationsEnBo _root; // ignore: unused_field
 
 	// Translations
-	@override String get total => 'total en_BO';
+	@override String total({required Object month}) => 'Total of ${month} ';
 }
 
 // Path: <root>
@@ -268,7 +316,23 @@ class _TranslationsEnUs implements _TranslationsEs {
 	@override late final _TranslationsEnUs _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeDropDownButtonEnUs homeDropDownButton = _TranslationsHomeDropDownButtonEnUs._(_root);
 	@override late final _TranslationsHomeEnUs home = _TranslationsHomeEnUs._(_root);
+}
+
+// Path: homeDropDownButton
+class _TranslationsHomeDropDownButtonEnUs implements _TranslationsHomeDropDownButtonEs {
+	_TranslationsHomeDropDownButtonEnUs._(this._root);
+
+	@override final _TranslationsEnUs _root; // ignore: unused_field
+
+	// Translations
+	@override String get spanish => 'Spanish';
+	@override String get spanishBo => 'Spanish Bo';
+	@override String get spanishUs => 'Spanish US';
+	@override String get english => 'English';
+	@override String get englishBo => 'English Bo';
+	@override String get englishUs => 'English US';
 }
 
 // Path: home
@@ -278,7 +342,7 @@ class _TranslationsHomeEnUs implements _TranslationsHomeEs {
 	@override final _TranslationsEnUs _root; // ignore: unused_field
 
 	// Translations
-	@override String get total => 'total en_US';
+	@override String total({required Object month}) => 'Total of ${month} ';
 }
 
 // Path: <root>
@@ -306,7 +370,23 @@ class _TranslationsEsBo implements _TranslationsEs {
 	@override late final _TranslationsEsBo _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeDropDownButtonEsBo homeDropDownButton = _TranslationsHomeDropDownButtonEsBo._(_root);
 	@override late final _TranslationsHomeEsBo home = _TranslationsHomeEsBo._(_root);
+}
+
+// Path: homeDropDownButton
+class _TranslationsHomeDropDownButtonEsBo implements _TranslationsHomeDropDownButtonEs {
+	_TranslationsHomeDropDownButtonEsBo._(this._root);
+
+	@override final _TranslationsEsBo _root; // ignore: unused_field
+
+	// Translations
+	@override String get spanish => 'Español';
+	@override String get spanishBo => 'Español Bo';
+	@override String get spanishUs => 'Español US';
+	@override String get english => 'Inglés';
+	@override String get englishBo => 'Inglés Bo';
+	@override String get englishUs => 'Inglés US';
 }
 
 // Path: home
@@ -316,7 +396,7 @@ class _TranslationsHomeEsBo implements _TranslationsHomeEs {
 	@override final _TranslationsEsBo _root; // ignore: unused_field
 
 	// Translations
-	@override String get total => 'total es_BO';
+	@override String total({required Object month}) => 'Total en ${month} ';
 }
 
 // Path: <root>
@@ -344,7 +424,23 @@ class _TranslationsEsUs implements _TranslationsEs {
 	@override late final _TranslationsEsUs _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeDropDownButtonEsUs homeDropDownButton = _TranslationsHomeDropDownButtonEsUs._(_root);
 	@override late final _TranslationsHomeEsUs home = _TranslationsHomeEsUs._(_root);
+}
+
+// Path: homeDropDownButton
+class _TranslationsHomeDropDownButtonEsUs implements _TranslationsHomeDropDownButtonEs {
+	_TranslationsHomeDropDownButtonEsUs._(this._root);
+
+	@override final _TranslationsEsUs _root; // ignore: unused_field
+
+	// Translations
+	@override String get spanish => 'Español';
+	@override String get spanishBo => 'Español Bo';
+	@override String get spanishUs => 'Español US';
+	@override String get english => 'Inglés';
+	@override String get englishBo => 'Inglés Bo';
+	@override String get englishUs => 'Inglés US';
 }
 
 // Path: home
@@ -354,7 +450,7 @@ class _TranslationsHomeEsUs implements _TranslationsHomeEs {
 	@override final _TranslationsEsUs _root; // ignore: unused_field
 
 	// Translations
-	@override String get total => 'total es_US';
+	@override String total({required Object month}) => 'Total en ${month} ';
 }
 
 /// Flat map(s) containing all translations.
@@ -363,7 +459,13 @@ class _TranslationsHomeEsUs implements _TranslationsHomeEs {
 extension on _TranslationsEs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'home.total': return 'total es';
+			case 'homeDropDownButton.spanish': return 'Español';
+			case 'homeDropDownButton.spanishBo': return 'Español Bo';
+			case 'homeDropDownButton.spanishUs': return 'Español US';
+			case 'homeDropDownButton.english': return 'Inglés';
+			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
+			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}
 	}
@@ -372,7 +474,13 @@ extension on _TranslationsEs {
 extension on _TranslationsEn {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'home.total': return 'total en';
+			case 'homeDropDownButton.spanish': return 'Spanish';
+			case 'homeDropDownButton.spanishBo': return 'Spanish Bo';
+			case 'homeDropDownButton.spanishUs': return 'Spanish US';
+			case 'homeDropDownButton.english': return 'English';
+			case 'homeDropDownButton.englishBo': return 'English Bo';
+			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
 	}
@@ -381,7 +489,13 @@ extension on _TranslationsEn {
 extension on _TranslationsEnBo {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'home.total': return 'total en_BO';
+			case 'homeDropDownButton.spanish': return 'Spanish';
+			case 'homeDropDownButton.spanishBo': return 'Spanish Bo';
+			case 'homeDropDownButton.spanishUs': return 'Spanish US';
+			case 'homeDropDownButton.english': return 'English';
+			case 'homeDropDownButton.englishBo': return 'English Bo';
+			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
 	}
@@ -390,7 +504,13 @@ extension on _TranslationsEnBo {
 extension on _TranslationsEnUs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'home.total': return 'total en_US';
+			case 'homeDropDownButton.spanish': return 'Spanish';
+			case 'homeDropDownButton.spanishBo': return 'Spanish Bo';
+			case 'homeDropDownButton.spanishUs': return 'Spanish US';
+			case 'homeDropDownButton.english': return 'English';
+			case 'homeDropDownButton.englishBo': return 'English Bo';
+			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
 	}
@@ -399,7 +519,13 @@ extension on _TranslationsEnUs {
 extension on _TranslationsEsBo {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'home.total': return 'total es_BO';
+			case 'homeDropDownButton.spanish': return 'Español';
+			case 'homeDropDownButton.spanishBo': return 'Español Bo';
+			case 'homeDropDownButton.spanishUs': return 'Español US';
+			case 'homeDropDownButton.english': return 'Inglés';
+			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
+			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}
 	}
@@ -408,7 +534,13 @@ extension on _TranslationsEsBo {
 extension on _TranslationsEsUs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'home.total': return 'total es_US';
+			case 'homeDropDownButton.spanish': return 'Español';
+			case 'homeDropDownButton.spanishBo': return 'Español Bo';
+			case 'homeDropDownButton.spanishUs': return 'Español US';
+			case 'homeDropDownButton.english': return 'Inglés';
+			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
+			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}
 	}

@@ -32,4 +32,7 @@ class AppColorsTheme {
       ),
     ),
   );
+  static Color white = Colors.white;
+  static Color grey = Colors.grey.shade300;
+  static Color red = Colors.red;
 } // yo

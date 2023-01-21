@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
       ],
       supportedLocales: AppLocaleUtils.supportedLocales,
-      // locale: TranslationProvider.of(context).flutterLocale,
+      locale: TranslationProvider.of(context).flutterLocale,
     );
   }
 }

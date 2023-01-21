@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/number_symbols.dart';
 import 'package:intl/number_symbols_data.dart';
@@ -6,9 +7,10 @@ import 'app/my_app.dart';
 import 'dart:ui' as ui;
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'generated/translations.g.dart';
 
 Future<void> main() async {
-  if (ui.window.locale.countryCode?.isNotEmpty ?? false) { 
+  if (ui.window.locale.countryCode?.isNotEmpty ?? false) {
     Intl.defaultLocale =
         '${ui.window.locale.languageCode}_${ui.window.locale.countryCode}';
   } else {
@@ -52,11 +54,21 @@ Future<void> main() async {
     CURRENCY_PATTERN: '#,##0.00 \u00A4',
     DEF_CURRENCY_CODE: 'Bs.',
   );
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
   WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();
   await Firebase.initializeApp(
     name: 'antonio',
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const MyApp());
+  runApp(
+    TranslationProvider(
+      child: const MyApp(),
+    ),
+  );
 }

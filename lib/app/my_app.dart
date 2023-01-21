@@ -1,4 +1,5 @@
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_meedu/ui.dart';
@@ -26,15 +27,8 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],
-      supportedLocales: const [
-        Locale('es'),
-        Locale('en'),
-        Locale('es_BO'),
-        Locale('en_BO'),
-        Locale('es_US'),
-        Locale('en_US'),
-      ],
-      // locale: Locale('es'),
+      supportedLocales: AppLocaleUtils.supportedLocales,
+      locale: TranslationProvider.of(context).flutterLocale,
     );
   }
 }

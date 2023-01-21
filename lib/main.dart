@@ -10,6 +10,14 @@ import 'firebase_options.dart';
 import 'generated/translations.g.dart';
 
 Future<void> main() async {
+  
+  WidgetsFlutterBinding.ensureInitialized();
+  LocaleSettings.useDeviceLocale();
+  await Firebase.initializeApp(
+    name: 'antonio',
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   if (ui.window.locale.countryCode?.isNotEmpty ?? false) {
     Intl.defaultLocale =
         '${ui.window.locale.languageCode}_${ui.window.locale.countryCode}';
@@ -59,12 +67,7 @@ Future<void> main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  WidgetsFlutterBinding.ensureInitialized();
-  LocaleSettings.useDeviceLocale();
-  await Firebase.initializeApp(
-    name: 'antonio',
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+ 
 
   runApp(
     TranslationProvider(

@@ -32,7 +32,7 @@ class MyHeader extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            texts.total,
+            texts.home.total,
             // 'Total of ${DateFormat('MMMM').format(DateTime.now())}',
             style: const TextStyle(
               color: Colors.white,

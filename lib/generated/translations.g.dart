@@ -3,7 +3,7 @@
 /// Locales: 6
 /// Strings: 6 (1 per locale)
 ///
-/// Built on 2023-01-21 at 07:14 UTC
+/// Built on 2023-01-21 at 08:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -154,6 +154,16 @@ class _TranslationsEs implements BaseTranslations<AppLocale, _TranslationsEs> {
 	late final _TranslationsEs _root = this; // ignore: unused_field
 
 	// Translations
+	late final _TranslationsHomeEs home = _TranslationsHomeEs._(_root);
+}
+
+// Path: home
+class _TranslationsHomeEs {
+	_TranslationsHomeEs._(this._root);
+
+	final _TranslationsEs _root; // ignore: unused_field
+
+	// Translations
 	String get total => 'total es';
 }
 
@@ -180,6 +190,16 @@ class _TranslationsEn implements _TranslationsEs {
 	@override dynamic operator[](String key) => $meta.getTranslation(key);
 
 	@override late final _TranslationsEn _root = this; // ignore: unused_field
+
+	// Translations
+	@override late final _TranslationsHomeEn home = _TranslationsHomeEn._(_root);
+}
+
+// Path: home
+class _TranslationsHomeEn implements _TranslationsHomeEs {
+	_TranslationsHomeEn._(this._root);
+
+	@override final _TranslationsEn _root; // ignore: unused_field
 
 	// Translations
 	@override String get total => 'total en';
@@ -210,6 +230,16 @@ class _TranslationsEnBo implements _TranslationsEs {
 	@override late final _TranslationsEnBo _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeEnBo home = _TranslationsHomeEnBo._(_root);
+}
+
+// Path: home
+class _TranslationsHomeEnBo implements _TranslationsHomeEs {
+	_TranslationsHomeEnBo._(this._root);
+
+	@override final _TranslationsEnBo _root; // ignore: unused_field
+
+	// Translations
 	@override String get total => 'total en_BO';
 }
 
@@ -236,6 +266,16 @@ class _TranslationsEnUs implements _TranslationsEs {
 	@override dynamic operator[](String key) => $meta.getTranslation(key);
 
 	@override late final _TranslationsEnUs _root = this; // ignore: unused_field
+
+	// Translations
+	@override late final _TranslationsHomeEnUs home = _TranslationsHomeEnUs._(_root);
+}
+
+// Path: home
+class _TranslationsHomeEnUs implements _TranslationsHomeEs {
+	_TranslationsHomeEnUs._(this._root);
+
+	@override final _TranslationsEnUs _root; // ignore: unused_field
 
 	// Translations
 	@override String get total => 'total en_US';
@@ -266,6 +306,16 @@ class _TranslationsEsBo implements _TranslationsEs {
 	@override late final _TranslationsEsBo _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeEsBo home = _TranslationsHomeEsBo._(_root);
+}
+
+// Path: home
+class _TranslationsHomeEsBo implements _TranslationsHomeEs {
+	_TranslationsHomeEsBo._(this._root);
+
+	@override final _TranslationsEsBo _root; // ignore: unused_field
+
+	// Translations
 	@override String get total => 'total es_BO';
 }
 
@@ -294,6 +344,16 @@ class _TranslationsEsUs implements _TranslationsEs {
 	@override late final _TranslationsEsUs _root = this; // ignore: unused_field
 
 	// Translations
+	@override late final _TranslationsHomeEsUs home = _TranslationsHomeEsUs._(_root);
+}
+
+// Path: home
+class _TranslationsHomeEsUs implements _TranslationsHomeEs {
+	_TranslationsHomeEsUs._(this._root);
+
+	@override final _TranslationsEsUs _root; // ignore: unused_field
+
+	// Translations
 	@override String get total => 'total es_US';
 }
 
@@ -303,7 +363,7 @@ class _TranslationsEsUs implements _TranslationsEs {
 extension on _TranslationsEs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'total': return 'total es';
+			case 'home.total': return 'total es';
 			default: return null;
 		}
 	}
@@ -312,7 +372,7 @@ extension on _TranslationsEs {
 extension on _TranslationsEn {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'total': return 'total en';
+			case 'home.total': return 'total en';
 			default: return null;
 		}
 	}
@@ -321,7 +381,7 @@ extension on _TranslationsEn {
 extension on _TranslationsEnBo {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'total': return 'total en_BO';
+			case 'home.total': return 'total en_BO';
 			default: return null;
 		}
 	}
@@ -330,7 +390,7 @@ extension on _TranslationsEnBo {
 extension on _TranslationsEnUs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'total': return 'total en_US';
+			case 'home.total': return 'total en_US';
 			default: return null;
 		}
 	}
@@ -339,7 +399,7 @@ extension on _TranslationsEnUs {
 extension on _TranslationsEsBo {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'total': return 'total es_BO';
+			case 'home.total': return 'total es_BO';
 			default: return null;
 		}
 	}
@@ -348,7 +408,7 @@ extension on _TranslationsEsBo {
 extension on _TranslationsEsUs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
-			case 'total': return 'total es_US';
+			case 'home.total': return 'total es_US';
 			default: return null;
 		}
 	}

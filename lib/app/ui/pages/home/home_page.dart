@@ -1,11 +1,8 @@
 import 'package:finance_app/app/ui/pages/home/widgets/my_dropdown_button.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_floating_action_button.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_header.dart';
-import 'package:finance_app/app/utils/app_colors_theme.dart';
-import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
-import 'package:intl/intl.dart';
 import 'controller/home_provider.dart';
 
 class HomePage extends StatelessWidget {
@@ -18,7 +15,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        actions: [
+        actions: const [
           MyDropDownButton()
         ],
       ),

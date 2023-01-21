@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         router.observer,
       ],
       routes: appRoutes,
-      initialRoute: Routes.HOME,
+      initialRoute: Routes.SPLASH,
       theme: AppColorsTheme.kThemeLight,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,

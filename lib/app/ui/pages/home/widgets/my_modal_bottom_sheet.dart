@@ -108,7 +108,10 @@ class MyModalBottomSheet extends StatelessWidget {
                                     color: AppColorsTheme.white,
                                     ),
                                   ),
-                                  Icon(Icons.add_a_photo_outlined, color: AppColorsTheme.white,),
+                                  Icon( 
+                                    Icons.add_a_photo_outlined, 
+                                    color: AppColorsTheme.white,
+                                  ),
                                 ],
                               ),
                             ),

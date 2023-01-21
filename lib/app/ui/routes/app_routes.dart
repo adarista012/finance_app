@@ -1,3 +1,4 @@
+import '../pages/splash/splash_page.dart';
 import '../pages/detail/detail_page.dart';
 import 'package:flutter/widgets.dart' show BuildContext, Widget;
 import 'routes.dart';
@@ -8,5 +9,6 @@ Map<String, Widget Function(BuildContext)> get appRoutes {
   return {
     Routes.HOME: (_) => const HomePage(),
     Routes.DETAIL: (_) => const DetailPage(),
+    Routes.SPLASH: (_) => const SplashPage(),
   };
 }

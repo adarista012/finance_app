@@ -17,20 +17,16 @@ class HomeController extends SimpleNotifier {
     getFirebaseExpenses();
   }
 
-  void reload() {
+  void reloadListDismissible() {
     getFirebaseExpenses();
   }
 
   final CollectionReference _expenses =
       FirebaseFirestore.instance.collection('expenses');
-  final Stream<QuerySnapshot> expensesStreamS = FirebaseFirestore.instance
-      .collection('expenses')
-      .orderBy('date', descending: true)
-      .snapshots();
   double _totalAmount = 0;
   double get totalAmmount => _totalAmount;
-  List<Expense> _list = [];
-  List<Expense> get list => _list;
+  // List<Expense> _list = [];
+  // List<Expense> get list => _list;
   List<MyDismissible> _listDismissibles = [];
   List<MyDismissible> get listDismissibles => _listDismissibles;
   final _formKey = GlobalKey<FormState>();
@@ -53,8 +49,8 @@ class HomeController extends SimpleNotifier {
   bool _isLoading = false;
   bool get isLoading => _isLoading;
 
-  bool _isUpload = false;
-  bool get isUpload => _isUpload;
+  // bool _isUpload = false;
+  // bool get isUpload => _isUpload;
 
   void setCurrentPrice(double doubleAmount) => _currentPrice = doubleAmount;
   void setCurrentDetail(String currentDetail) => _currentDetail = currentDetail;
@@ -74,7 +70,7 @@ class HomeController extends SimpleNotifier {
 
   Future pickerImage(ImageSource source) async {
     final ImagePicker picker = ImagePicker();
-    final image = await picker.getImage(source: source);
+    final image = await picker.pickImage(source: source);
     if (image == null) return;
     File? img = File(image.path);
     setCurrentImage(img);
@@ -126,19 +122,15 @@ class HomeController extends SimpleNotifier {
   }
 
   Future<void> deleteImagetoFirebaseStorage(String hash) async {
-    print('=== delete on');
     final storageRef = FirebaseStorage.instance.ref();
     final desertRef = storageRef.child(hash);
     await desertRef.delete();
   }
 
   void addExpense() async {
-    print('=== add expense on');
     if (_currentImage != null) {
       await uploadImageToFirebaseStorage(_currentImage!.hashCode.toString());
-      print('=== upload finish');
       await uploadExpenseToFirebaseFirestore();
-      print('=== add Expense finish');
     } else {
       await uploadExpenseToFirebaseFirestore();
     }
@@ -159,14 +151,9 @@ class HomeController extends SimpleNotifier {
     notify();
   }
 
-  final Stream<QuerySnapshot> expensesStream = FirebaseFirestore.instance
-      .collection('expenses')
-      .orderBy('date', descending: true)
-      .snapshots();
-
   Future<void> getFirebaseExpenses() async {
     _isLoading = true;
-    _list.clear();
+    // _list.clear();
     final Stream<QuerySnapshot> expensesStream = FirebaseFirestore.instance
         .collection('expenses')
         .orderBy('date', descending: true)
@@ -188,7 +175,6 @@ class HomeController extends SimpleNotifier {
             );
           },
         ).toList();
-        print('end download list ----');
         _totalAmount = amount();
         _isLoading = false;
         notify();

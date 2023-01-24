@@ -30,7 +30,7 @@ class MyDropDownButton extends StatelessWidget {
             } else {
               Intl.defaultLocale = locale.languageCode;
             }
-            homeProvider.read.reload();
+            homeProvider.read.reloadListDismissible();
           }
         },
         items: [

@@ -28,9 +28,9 @@ class HomePage extends StatelessWidget {
                 ref.watch(homeProvider.select((p0) => p0.listDismissibles));
             return Column(
               children: [
-                Flexible(
+                const Flexible(
                   flex: 1,
-                  child: MyHeader(controller: controller),
+                  child: MyHeader(),
                 ),
                 Flexible(
                     flex: 4,

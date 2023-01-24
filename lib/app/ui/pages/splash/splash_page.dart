@@ -22,23 +22,16 @@ class SplashPage extends StatelessWidget {
         }
       },
       builder: (_, __) {
-        return Scaffold(
+        return const Scaffold(
           body: Center(
-            child: Container(
-              height: 120,
-              width: 120,
-              decoration: const BoxDecoration(
-                color: AppColorsTheme.kPink
+            child: Text(
+              'SPLASH', 
+              style: TextStyle(
+                color: AppColorsTheme.kPink,
+                fontSize: 32,
+                fontWeight: FontWeight.w300
               ),
-              child: Center(
-                child: Text(
-                  'SPASH', 
-                  style: TextStyle(
-                    color: AppColorsTheme.white,
-                  ),
-                ),
-              ),
-            )
+            ),
           ),
         );
       },

@@ -1,3 +1,4 @@
+import 'package:finance_app/app/utils/inject_depedencies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
@@ -65,6 +66,8 @@ Future<void> main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+
+  await injectDependencies();
 
   runApp(
     TranslationProvider(

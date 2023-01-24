@@ -58,14 +58,14 @@ class MyModalBottomSheet extends StatelessWidget {
                   },
                 ),
                 const SizedBox(
-                  height: 8.0,
+                  height: 16.0,
                 ),
                 Consumer(builder: (_, ref, __) {
                   final controller =
                       ref.watch(homeProvider.select((_) => _.currentImage));
                   if(controller.currentImage == null){
                     return MaterialButton(
-                      color: AppColorsTheme.grey,
+                      color: AppColorsTheme.kPink,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
@@ -92,7 +92,7 @@ class MyModalBottomSheet extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             MaterialButton(
-                              color: AppColorsTheme.grey,
+                              color: AppColorsTheme.kPink,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16.0),
                               ),

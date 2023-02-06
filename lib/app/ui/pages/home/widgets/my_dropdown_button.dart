@@ -2,6 +2,7 @@ import 'package:finance_app/app/ui/pages/home/controller/home_provider.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_meedu/ui.dart';
 import 'package:intl/intl.dart';
 
 class MyDropDownButton extends StatelessWidget {
@@ -11,7 +12,10 @@ class MyDropDownButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return DropdownButton<AppLocale>(
         value: TranslationProvider.of(context).locale,
-        icon: Icon(Icons.arrow_drop_down, color: AppColorsTheme.white,),
+        icon: Icon(
+          Icons.arrow_drop_down,
+          color: AppColorsTheme.white,
+        ),
         elevation: 1,
         style: TextStyle(
           color: AppColorsTheme.white,
@@ -31,6 +35,7 @@ class MyDropDownButton extends StatelessWidget {
               Intl.defaultLocale = locale.languageCode;
             }
             homeProvider.read.reloadListDismissible();
+            router.pop();
           }
         },
         items: [

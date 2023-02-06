@@ -1,3 +1,4 @@
+import 'package:finance_app/app/ui/global_controllers/session_controller.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_dropdown_button.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_floating_action_button.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_header.dart';
@@ -14,11 +15,20 @@ class HomePage extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        // leading: IconButton(
+        //   onPressed: () {
+        //     sessionProvider.read.signOut();
+        //   },
+        //   icon: const Icon(Icons.logout),
+        // ),
+        title: Consumer(builder: (_, watch, __) {
+          final user = watch.watch(sessionProvider).user;
+          return Text(user?.displayName ?? '');
+        }),
         elevation: 0.0,
-        actions: const [
-          MyDropDownButton()
-        ],
+        actions: const [MyDropDownButton()],
       ),
+      // drawer:
       body: SizedBox(
         height: height,
         width: width,

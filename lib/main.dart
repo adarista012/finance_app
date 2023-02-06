@@ -1,6 +1,5 @@
 import 'package:finance_app/app/utils/inject_depedencies.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/number_symbols.dart';
 import 'package:intl/number_symbols_data.dart';
@@ -62,10 +61,10 @@ Future<void> main() async {
     CURRENCY_PATTERN: '#,##0.00 \u00A4',
     DEF_CURRENCY_CODE: 'Bs.',
   );
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  //   DeviceOrientation.portraitDown,
+  // ]);
 
   await injectDependencies();
 

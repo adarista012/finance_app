@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 6
-/// Strings: 42 (7 per locale)
+/// Strings: 222 (37 per locale)
 ///
-/// Built on 2023-01-21 at 19:07 UTC
+/// Built on 2023-02-03 at 17:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -155,6 +155,7 @@ class _TranslationsEs implements BaseTranslations<AppLocale, _TranslationsEs> {
 
 	// Translations
 	late final _TranslationsHomeDropDownButtonEs homeDropDownButton = _TranslationsHomeDropDownButtonEs._(_root);
+	late final _TranslationsLoginEs login = _TranslationsLoginEs._(_root);
 	late final _TranslationsHomeEs home = _TranslationsHomeEs._(_root);
 }
 
@@ -171,6 +172,45 @@ class _TranslationsHomeDropDownButtonEs {
 	String get english => 'Inglés';
 	String get englishBo => 'Inglés Bo';
 	String get englishUs => 'Inglés US';
+}
+
+// Path: login
+class _TranslationsLoginEs {
+	_TranslationsLoginEs._(this._root);
+
+	final _TranslationsEs _root; // ignore: unused_field
+
+	// Translations
+	String get signUp => 'Registrarse';
+	String get logIn => 'Acceder';
+	String get signIn => 'Iniciar sesión';
+	String get alreadyHaveAnAccount => 'Ya tienes una cuenta';
+	String get dontHaveAnAccount => 'No tienes una cuenta';
+	String get name => 'Nombre';
+	String get email => 'Correo electrónico';
+	String get password => 'Contraseña';
+	String get verificationPassword => 'Repetir contraseña';
+	String get register => 'Registrar';
+	String get invalidName => 'nombre inválido';
+	String get invalidEmail => 'correo electrónico inválido';
+	String get invalidPassword => 'contraseña inválida';
+	String get passwordDontMatch => 'no coincide la contraseña';
+	String get error => 'Error';
+	String get invalidFields => 'Campos inválidos';
+	String get emailAlreadyInUse => 'Correo electrónico ya está registrado';
+	String get weakPassword => 'Contraseña muy débil';
+	String get unknwonError => 'Error desconocidor';
+	String get userDisabled => 'Usuario deshabilitado';
+	String get userNotFound => 'Usuario no encontrado';
+	String get wrongPassword => 'Contraseña errónea';
+	String get tooManyRequest => 'Exceso de peticiones';
+	String get networkRequestFailed => 'Fallo en la solicitud de red';
+	String get send => 'Enviar';
+	String get emailSent => 'Correo electrónico enviado';
+	String get internalError => 'Error interno';
+	String get good => 'Bien';
+	String get ok => 'OK';
+	String get forgotYourPassword => 'Olvidó su contraseña';
 }
 
 // Path: home
@@ -209,6 +249,7 @@ class _TranslationsEn implements _TranslationsEs {
 
 	// Translations
 	@override late final _TranslationsHomeDropDownButtonEn homeDropDownButton = _TranslationsHomeDropDownButtonEn._(_root);
+	@override late final _TranslationsLoginEn login = _TranslationsLoginEn._(_root);
 	@override late final _TranslationsHomeEn home = _TranslationsHomeEn._(_root);
 }
 
@@ -225,6 +266,45 @@ class _TranslationsHomeDropDownButtonEn implements _TranslationsHomeDropDownButt
 	@override String get english => 'English';
 	@override String get englishBo => 'English Bo';
 	@override String get englishUs => 'English US';
+}
+
+// Path: login
+class _TranslationsLoginEn implements _TranslationsLoginEs {
+	_TranslationsLoginEn._(this._root);
+
+	@override final _TranslationsEn _root; // ignore: unused_field
+
+	// Translations
+	@override String get signUp => 'Sing up';
+	@override String get logIn => 'Log in';
+	@override String get signIn => 'Sign in';
+	@override String get alreadyHaveAnAccount => 'Already have an account';
+	@override String get dontHaveAnAccount => 'Don\'t have an account';
+	@override String get name => 'Name';
+	@override String get email => 'Email';
+	@override String get password => 'Password';
+	@override String get verificationPassword => 'Verification password';
+	@override String get register => 'Register';
+	@override String get invalidName => 'invalid name';
+	@override String get invalidEmail => 'invalid email';
+	@override String get invalidPassword => 'invalid password';
+	@override String get passwordDontMatch => 'password don\'t match';
+	@override String get error => 'Error';
+	@override String get invalidFields => 'invalid fields';
+	@override String get emailAlreadyInUse => 'Email already in use';
+	@override String get weakPassword => 'Weak password';
+	@override String get unknwonError => 'Unknwon error';
+	@override String get userDisabled => 'User disabled';
+	@override String get userNotFound => 'User not found';
+	@override String get wrongPassword => 'Wrong password';
+	@override String get tooManyRequest => 'Too many request';
+	@override String get networkRequestFailed => 'Network request failed';
+	@override String get send => 'Send';
+	@override String get emailSent => 'Email sent';
+	@override String get internalError => 'Internal error';
+	@override String get good => 'Good';
+	@override String get ok => 'OK';
+	@override String get forgotYourPassword => 'Forgot your password';
 }
 
 // Path: home
@@ -263,6 +343,7 @@ class _TranslationsEnBo implements _TranslationsEs {
 
 	// Translations
 	@override late final _TranslationsHomeDropDownButtonEnBo homeDropDownButton = _TranslationsHomeDropDownButtonEnBo._(_root);
+	@override late final _TranslationsLoginEnBo login = _TranslationsLoginEnBo._(_root);
 	@override late final _TranslationsHomeEnBo home = _TranslationsHomeEnBo._(_root);
 }
 
@@ -279,6 +360,45 @@ class _TranslationsHomeDropDownButtonEnBo implements _TranslationsHomeDropDownBu
 	@override String get english => 'English';
 	@override String get englishBo => 'English Bo';
 	@override String get englishUs => 'English US';
+}
+
+// Path: login
+class _TranslationsLoginEnBo implements _TranslationsLoginEs {
+	_TranslationsLoginEnBo._(this._root);
+
+	@override final _TranslationsEnBo _root; // ignore: unused_field
+
+	// Translations
+	@override String get signUp => 'Sing up';
+	@override String get logIn => 'Log in';
+	@override String get signIn => 'Sign in';
+	@override String get alreadyHaveAnAccount => 'Already have an account';
+	@override String get dontHaveAnAccount => 'Don\'t have an account';
+	@override String get name => 'Name';
+	@override String get email => 'Email';
+	@override String get password => 'Password';
+	@override String get verificationPassword => 'Verification password';
+	@override String get register => 'Register';
+	@override String get invalidName => 'invalid name';
+	@override String get invalidEmail => 'invalid email';
+	@override String get invalidPassword => 'invalid password';
+	@override String get passwordDontMatch => 'password don\'t match';
+	@override String get error => 'Error';
+	@override String get invalidFields => 'invalid fields';
+	@override String get emailAlreadyInUse => 'Email already in use';
+	@override String get weakPassword => 'Weak password';
+	@override String get unknwonError => 'Unknwon error';
+	@override String get userDisabled => 'User disabled';
+	@override String get userNotFound => 'User not found';
+	@override String get wrongPassword => 'Wrong password';
+	@override String get tooManyRequest => 'Too many request';
+	@override String get networkRequestFailed => 'Network request failed';
+	@override String get send => 'Send';
+	@override String get emailSent => 'Email sent';
+	@override String get internalError => 'Internal error';
+	@override String get good => 'Good';
+	@override String get ok => 'OK';
+	@override String get forgotYourPassword => 'Forgot your password';
 }
 
 // Path: home
@@ -317,6 +437,7 @@ class _TranslationsEnUs implements _TranslationsEs {
 
 	// Translations
 	@override late final _TranslationsHomeDropDownButtonEnUs homeDropDownButton = _TranslationsHomeDropDownButtonEnUs._(_root);
+	@override late final _TranslationsLoginEnUs login = _TranslationsLoginEnUs._(_root);
 	@override late final _TranslationsHomeEnUs home = _TranslationsHomeEnUs._(_root);
 }
 
@@ -333,6 +454,45 @@ class _TranslationsHomeDropDownButtonEnUs implements _TranslationsHomeDropDownBu
 	@override String get english => 'English';
 	@override String get englishBo => 'English Bo';
 	@override String get englishUs => 'English US';
+}
+
+// Path: login
+class _TranslationsLoginEnUs implements _TranslationsLoginEs {
+	_TranslationsLoginEnUs._(this._root);
+
+	@override final _TranslationsEnUs _root; // ignore: unused_field
+
+	// Translations
+	@override String get signUp => 'Sing up';
+	@override String get logIn => 'Log in';
+	@override String get signIn => 'Sign in';
+	@override String get alreadyHaveAnAccount => 'Already have an account';
+	@override String get dontHaveAnAccount => 'Don\'t have an account';
+	@override String get name => 'Name';
+	@override String get email => 'Email';
+	@override String get password => 'Password';
+	@override String get verificationPassword => 'Verification password';
+	@override String get register => 'Register';
+	@override String get invalidName => 'invalid name';
+	@override String get invalidEmail => 'invalid email';
+	@override String get invalidPassword => 'invalid password';
+	@override String get passwordDontMatch => 'password don\'t match';
+	@override String get error => 'Error';
+	@override String get invalidFields => 'invalid fields';
+	@override String get emailAlreadyInUse => 'Email already in use';
+	@override String get weakPassword => 'Weak password';
+	@override String get unknwonError => 'Unknwon error';
+	@override String get userDisabled => 'User disabled';
+	@override String get userNotFound => 'User not found';
+	@override String get wrongPassword => 'Wrong password';
+	@override String get tooManyRequest => 'Too many request';
+	@override String get networkRequestFailed => 'Network request failed';
+	@override String get send => 'Send';
+	@override String get emailSent => 'Email sent';
+	@override String get internalError => 'Internal error';
+	@override String get good => 'Good';
+	@override String get ok => 'OK';
+	@override String get forgotYourPassword => 'Forgot your password';
 }
 
 // Path: home
@@ -371,6 +531,7 @@ class _TranslationsEsBo implements _TranslationsEs {
 
 	// Translations
 	@override late final _TranslationsHomeDropDownButtonEsBo homeDropDownButton = _TranslationsHomeDropDownButtonEsBo._(_root);
+	@override late final _TranslationsLoginEsBo login = _TranslationsLoginEsBo._(_root);
 	@override late final _TranslationsHomeEsBo home = _TranslationsHomeEsBo._(_root);
 }
 
@@ -387,6 +548,45 @@ class _TranslationsHomeDropDownButtonEsBo implements _TranslationsHomeDropDownBu
 	@override String get english => 'Inglés';
 	@override String get englishBo => 'Inglés Bo';
 	@override String get englishUs => 'Inglés US';
+}
+
+// Path: login
+class _TranslationsLoginEsBo implements _TranslationsLoginEs {
+	_TranslationsLoginEsBo._(this._root);
+
+	@override final _TranslationsEsBo _root; // ignore: unused_field
+
+	// Translations
+	@override String get signUp => 'Registrarse';
+	@override String get logIn => 'Acceder';
+	@override String get signIn => 'Iniciar sesión';
+	@override String get alreadyHaveAnAccount => 'Ya tienes una cuenta';
+	@override String get dontHaveAnAccount => 'No tienes una cuenta';
+	@override String get name => 'Nombre';
+	@override String get email => 'Correo electrónico';
+	@override String get password => 'Contraseña';
+	@override String get verificationPassword => 'Repetir contraseña';
+	@override String get register => 'Registrar';
+	@override String get invalidName => 'nombre inválido';
+	@override String get invalidEmail => 'correo electrónico inválido';
+	@override String get invalidPassword => 'contraseña inválida';
+	@override String get passwordDontMatch => 'no coincide la contraseña';
+	@override String get error => 'Error';
+	@override String get invalidFields => 'Campos inválidos';
+	@override String get emailAlreadyInUse => 'Correo electrónico ya está registrado';
+	@override String get weakPassword => 'Contraseña muy débil';
+	@override String get unknwonError => 'Error desconocidor';
+	@override String get userDisabled => 'Usuario deshabilitado';
+	@override String get userNotFound => 'Usuario no encontrado';
+	@override String get wrongPassword => 'Contraseña errónea';
+	@override String get tooManyRequest => 'Exceso de peticiones';
+	@override String get networkRequestFailed => 'Fallo en la solicitud de red';
+	@override String get send => 'Enviar';
+	@override String get emailSent => 'Correo electrónico enviado';
+	@override String get internalError => 'Error interno';
+	@override String get good => 'Bien';
+	@override String get ok => 'OK';
+	@override String get forgotYourPassword => 'Olvidó su contraseña';
 }
 
 // Path: home
@@ -425,6 +625,7 @@ class _TranslationsEsUs implements _TranslationsEs {
 
 	// Translations
 	@override late final _TranslationsHomeDropDownButtonEsUs homeDropDownButton = _TranslationsHomeDropDownButtonEsUs._(_root);
+	@override late final _TranslationsLoginEsUs login = _TranslationsLoginEsUs._(_root);
 	@override late final _TranslationsHomeEsUs home = _TranslationsHomeEsUs._(_root);
 }
 
@@ -441,6 +642,45 @@ class _TranslationsHomeDropDownButtonEsUs implements _TranslationsHomeDropDownBu
 	@override String get english => 'Inglés';
 	@override String get englishBo => 'Inglés Bo';
 	@override String get englishUs => 'Inglés US';
+}
+
+// Path: login
+class _TranslationsLoginEsUs implements _TranslationsLoginEs {
+	_TranslationsLoginEsUs._(this._root);
+
+	@override final _TranslationsEsUs _root; // ignore: unused_field
+
+	// Translations
+	@override String get signUp => 'Registrarse';
+	@override String get logIn => 'Acceder';
+	@override String get signIn => 'Iniciar sesión';
+	@override String get alreadyHaveAnAccount => 'Ya tienes una cuenta';
+	@override String get dontHaveAnAccount => 'No tienes una cuenta';
+	@override String get name => 'Nombre';
+	@override String get email => 'Correo electrónico';
+	@override String get password => 'Contraseña';
+	@override String get verificationPassword => 'Repetir contraseña';
+	@override String get register => 'Registrar';
+	@override String get invalidName => 'nombre inválido';
+	@override String get invalidEmail => 'correo electrónico inválido';
+	@override String get invalidPassword => 'contraseña inválida';
+	@override String get passwordDontMatch => 'no coincide la contraseña';
+	@override String get error => 'Error';
+	@override String get invalidFields => 'Campos inválidos';
+	@override String get emailAlreadyInUse => 'Correo electrónico ya está registrado';
+	@override String get weakPassword => 'Contraseña muy débil';
+	@override String get unknwonError => 'Error desconocidor';
+	@override String get userDisabled => 'Usuario deshabilitado';
+	@override String get userNotFound => 'Usuario no encontrado';
+	@override String get wrongPassword => 'Contraseña errónea';
+	@override String get tooManyRequest => 'Exceso de peticiones';
+	@override String get networkRequestFailed => 'Fallo en la solicitud de red';
+	@override String get send => 'Enviar';
+	@override String get emailSent => 'Correo electrónico enviado';
+	@override String get internalError => 'Error interno';
+	@override String get good => 'Bien';
+	@override String get ok => 'OK';
+	@override String get forgotYourPassword => 'Olvidó su contraseña';
 }
 
 // Path: home
@@ -465,6 +705,36 @@ extension on _TranslationsEs {
 			case 'homeDropDownButton.english': return 'Inglés';
 			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
 			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'login.signUp': return 'Registrarse';
+			case 'login.logIn': return 'Acceder';
+			case 'login.signIn': return 'Iniciar sesión';
+			case 'login.alreadyHaveAnAccount': return 'Ya tienes una cuenta';
+			case 'login.dontHaveAnAccount': return 'No tienes una cuenta';
+			case 'login.name': return 'Nombre';
+			case 'login.email': return 'Correo electrónico';
+			case 'login.password': return 'Contraseña';
+			case 'login.verificationPassword': return 'Repetir contraseña';
+			case 'login.register': return 'Registrar';
+			case 'login.invalidName': return 'nombre inválido';
+			case 'login.invalidEmail': return 'correo electrónico inválido';
+			case 'login.invalidPassword': return 'contraseña inválida';
+			case 'login.passwordDontMatch': return 'no coincide la contraseña';
+			case 'login.error': return 'Error';
+			case 'login.invalidFields': return 'Campos inválidos';
+			case 'login.emailAlreadyInUse': return 'Correo electrónico ya está registrado';
+			case 'login.weakPassword': return 'Contraseña muy débil';
+			case 'login.unknwonError': return 'Error desconocidor';
+			case 'login.userDisabled': return 'Usuario deshabilitado';
+			case 'login.userNotFound': return 'Usuario no encontrado';
+			case 'login.wrongPassword': return 'Contraseña errónea';
+			case 'login.tooManyRequest': return 'Exceso de peticiones';
+			case 'login.networkRequestFailed': return 'Fallo en la solicitud de red';
+			case 'login.send': return 'Enviar';
+			case 'login.emailSent': return 'Correo electrónico enviado';
+			case 'login.internalError': return 'Error interno';
+			case 'login.good': return 'Bien';
+			case 'login.ok': return 'OK';
+			case 'login.forgotYourPassword': return 'Olvidó su contraseña';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}
@@ -480,6 +750,36 @@ extension on _TranslationsEn {
 			case 'homeDropDownButton.english': return 'English';
 			case 'homeDropDownButton.englishBo': return 'English Bo';
 			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'login.signUp': return 'Sing up';
+			case 'login.logIn': return 'Log in';
+			case 'login.signIn': return 'Sign in';
+			case 'login.alreadyHaveAnAccount': return 'Already have an account';
+			case 'login.dontHaveAnAccount': return 'Don\'t have an account';
+			case 'login.name': return 'Name';
+			case 'login.email': return 'Email';
+			case 'login.password': return 'Password';
+			case 'login.verificationPassword': return 'Verification password';
+			case 'login.register': return 'Register';
+			case 'login.invalidName': return 'invalid name';
+			case 'login.invalidEmail': return 'invalid email';
+			case 'login.invalidPassword': return 'invalid password';
+			case 'login.passwordDontMatch': return 'password don\'t match';
+			case 'login.error': return 'Error';
+			case 'login.invalidFields': return 'invalid fields';
+			case 'login.emailAlreadyInUse': return 'Email already in use';
+			case 'login.weakPassword': return 'Weak password';
+			case 'login.unknwonError': return 'Unknwon error';
+			case 'login.userDisabled': return 'User disabled';
+			case 'login.userNotFound': return 'User not found';
+			case 'login.wrongPassword': return 'Wrong password';
+			case 'login.tooManyRequest': return 'Too many request';
+			case 'login.networkRequestFailed': return 'Network request failed';
+			case 'login.send': return 'Send';
+			case 'login.emailSent': return 'Email sent';
+			case 'login.internalError': return 'Internal error';
+			case 'login.good': return 'Good';
+			case 'login.ok': return 'OK';
+			case 'login.forgotYourPassword': return 'Forgot your password';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
@@ -495,6 +795,36 @@ extension on _TranslationsEnBo {
 			case 'homeDropDownButton.english': return 'English';
 			case 'homeDropDownButton.englishBo': return 'English Bo';
 			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'login.signUp': return 'Sing up';
+			case 'login.logIn': return 'Log in';
+			case 'login.signIn': return 'Sign in';
+			case 'login.alreadyHaveAnAccount': return 'Already have an account';
+			case 'login.dontHaveAnAccount': return 'Don\'t have an account';
+			case 'login.name': return 'Name';
+			case 'login.email': return 'Email';
+			case 'login.password': return 'Password';
+			case 'login.verificationPassword': return 'Verification password';
+			case 'login.register': return 'Register';
+			case 'login.invalidName': return 'invalid name';
+			case 'login.invalidEmail': return 'invalid email';
+			case 'login.invalidPassword': return 'invalid password';
+			case 'login.passwordDontMatch': return 'password don\'t match';
+			case 'login.error': return 'Error';
+			case 'login.invalidFields': return 'invalid fields';
+			case 'login.emailAlreadyInUse': return 'Email already in use';
+			case 'login.weakPassword': return 'Weak password';
+			case 'login.unknwonError': return 'Unknwon error';
+			case 'login.userDisabled': return 'User disabled';
+			case 'login.userNotFound': return 'User not found';
+			case 'login.wrongPassword': return 'Wrong password';
+			case 'login.tooManyRequest': return 'Too many request';
+			case 'login.networkRequestFailed': return 'Network request failed';
+			case 'login.send': return 'Send';
+			case 'login.emailSent': return 'Email sent';
+			case 'login.internalError': return 'Internal error';
+			case 'login.good': return 'Good';
+			case 'login.ok': return 'OK';
+			case 'login.forgotYourPassword': return 'Forgot your password';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
@@ -510,6 +840,36 @@ extension on _TranslationsEnUs {
 			case 'homeDropDownButton.english': return 'English';
 			case 'homeDropDownButton.englishBo': return 'English Bo';
 			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'login.signUp': return 'Sing up';
+			case 'login.logIn': return 'Log in';
+			case 'login.signIn': return 'Sign in';
+			case 'login.alreadyHaveAnAccount': return 'Already have an account';
+			case 'login.dontHaveAnAccount': return 'Don\'t have an account';
+			case 'login.name': return 'Name';
+			case 'login.email': return 'Email';
+			case 'login.password': return 'Password';
+			case 'login.verificationPassword': return 'Verification password';
+			case 'login.register': return 'Register';
+			case 'login.invalidName': return 'invalid name';
+			case 'login.invalidEmail': return 'invalid email';
+			case 'login.invalidPassword': return 'invalid password';
+			case 'login.passwordDontMatch': return 'password don\'t match';
+			case 'login.error': return 'Error';
+			case 'login.invalidFields': return 'invalid fields';
+			case 'login.emailAlreadyInUse': return 'Email already in use';
+			case 'login.weakPassword': return 'Weak password';
+			case 'login.unknwonError': return 'Unknwon error';
+			case 'login.userDisabled': return 'User disabled';
+			case 'login.userNotFound': return 'User not found';
+			case 'login.wrongPassword': return 'Wrong password';
+			case 'login.tooManyRequest': return 'Too many request';
+			case 'login.networkRequestFailed': return 'Network request failed';
+			case 'login.send': return 'Send';
+			case 'login.emailSent': return 'Email sent';
+			case 'login.internalError': return 'Internal error';
+			case 'login.good': return 'Good';
+			case 'login.ok': return 'OK';
+			case 'login.forgotYourPassword': return 'Forgot your password';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
@@ -525,6 +885,36 @@ extension on _TranslationsEsBo {
 			case 'homeDropDownButton.english': return 'Inglés';
 			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
 			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'login.signUp': return 'Registrarse';
+			case 'login.logIn': return 'Acceder';
+			case 'login.signIn': return 'Iniciar sesión';
+			case 'login.alreadyHaveAnAccount': return 'Ya tienes una cuenta';
+			case 'login.dontHaveAnAccount': return 'No tienes una cuenta';
+			case 'login.name': return 'Nombre';
+			case 'login.email': return 'Correo electrónico';
+			case 'login.password': return 'Contraseña';
+			case 'login.verificationPassword': return 'Repetir contraseña';
+			case 'login.register': return 'Registrar';
+			case 'login.invalidName': return 'nombre inválido';
+			case 'login.invalidEmail': return 'correo electrónico inválido';
+			case 'login.invalidPassword': return 'contraseña inválida';
+			case 'login.passwordDontMatch': return 'no coincide la contraseña';
+			case 'login.error': return 'Error';
+			case 'login.invalidFields': return 'Campos inválidos';
+			case 'login.emailAlreadyInUse': return 'Correo electrónico ya está registrado';
+			case 'login.weakPassword': return 'Contraseña muy débil';
+			case 'login.unknwonError': return 'Error desconocidor';
+			case 'login.userDisabled': return 'Usuario deshabilitado';
+			case 'login.userNotFound': return 'Usuario no encontrado';
+			case 'login.wrongPassword': return 'Contraseña errónea';
+			case 'login.tooManyRequest': return 'Exceso de peticiones';
+			case 'login.networkRequestFailed': return 'Fallo en la solicitud de red';
+			case 'login.send': return 'Enviar';
+			case 'login.emailSent': return 'Correo electrónico enviado';
+			case 'login.internalError': return 'Error interno';
+			case 'login.good': return 'Bien';
+			case 'login.ok': return 'OK';
+			case 'login.forgotYourPassword': return 'Olvidó su contraseña';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}
@@ -540,6 +930,36 @@ extension on _TranslationsEsUs {
 			case 'homeDropDownButton.english': return 'Inglés';
 			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
 			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'login.signUp': return 'Registrarse';
+			case 'login.logIn': return 'Acceder';
+			case 'login.signIn': return 'Iniciar sesión';
+			case 'login.alreadyHaveAnAccount': return 'Ya tienes una cuenta';
+			case 'login.dontHaveAnAccount': return 'No tienes una cuenta';
+			case 'login.name': return 'Nombre';
+			case 'login.email': return 'Correo electrónico';
+			case 'login.password': return 'Contraseña';
+			case 'login.verificationPassword': return 'Repetir contraseña';
+			case 'login.register': return 'Registrar';
+			case 'login.invalidName': return 'nombre inválido';
+			case 'login.invalidEmail': return 'correo electrónico inválido';
+			case 'login.invalidPassword': return 'contraseña inválida';
+			case 'login.passwordDontMatch': return 'no coincide la contraseña';
+			case 'login.error': return 'Error';
+			case 'login.invalidFields': return 'Campos inválidos';
+			case 'login.emailAlreadyInUse': return 'Correo electrónico ya está registrado';
+			case 'login.weakPassword': return 'Contraseña muy débil';
+			case 'login.unknwonError': return 'Error desconocidor';
+			case 'login.userDisabled': return 'Usuario deshabilitado';
+			case 'login.userNotFound': return 'Usuario no encontrado';
+			case 'login.wrongPassword': return 'Contraseña errónea';
+			case 'login.tooManyRequest': return 'Exceso de peticiones';
+			case 'login.networkRequestFailed': return 'Fallo en la solicitud de red';
+			case 'login.send': return 'Enviar';
+			case 'login.emailSent': return 'Correo electrónico enviado';
+			case 'login.internalError': return 'Error interno';
+			case 'login.good': return 'Bien';
+			case 'login.ok': return 'OK';
+			case 'login.forgotYourPassword': return 'Olvidó su contraseña';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}

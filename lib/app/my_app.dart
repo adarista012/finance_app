@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       key: router.appKey,
-      title: 'Hello world',
+      title: 'Finance App',
       navigatorKey: router.navigatorKey,
       debugShowCheckedModeBanner: false,
       navigatorObservers: [

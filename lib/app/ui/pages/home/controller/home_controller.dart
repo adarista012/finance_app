@@ -31,6 +31,7 @@ class HomeController extends SimpleNotifier {
   List<MyDismissible> get listDismissibles => _listDismissibles;
   final _formKey = GlobalKey<FormState>();
   GlobalKey<FormState> get formKey => _formKey;
+  // final _auth = Get.find<AuthenticationRepository>();
 
   double _currentPrice = 0;
   double get currentPrice => _currentPrice;
@@ -51,6 +52,11 @@ class HomeController extends SimpleNotifier {
 
   // bool _isUpload = false;
   // bool get isUpload => _isUpload;
+
+  // Future<void> logOut() async {
+  //   await _auth.singOut();
+  //   router.pushNamedAndRemoveUntil(Routes.LOGIN);
+  // }
 
   void setCurrentPrice(double doubleAmount) => _currentPrice = doubleAmount;
   void setCurrentDetail(String currentDetail) => _currentDetail = currentDetail;

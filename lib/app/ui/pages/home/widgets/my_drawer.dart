@@ -1,4 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:finance_app/app/ui/global_controllers/session_controller.dart';
+import 'package:finance_app/app/ui/global_widgets/dialogs/dialogs.dart';
+import 'package:finance_app/app/ui/global_widgets/dialogs/progress_dialog.dart';
+import 'package:finance_app/app/ui/global_widgets/dialogs/show_input_dialog.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_dropdown_button.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:finance_app/generated/translations.g.dart';
@@ -25,12 +30,62 @@ class MyDrawer extends StatelessWidget {
               child: Consumer(
                 builder: (_, watch, __) {
                   final user = watch.watch(sessionProvider).user;
-                  return Text(
-                    user?.displayName ?? '',
-                    style: TextStyle(
-                      color: AppColorsTheme.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      CircleAvatar(
+                        radius: 56,
+                        child: user!.photoURL == null
+                            ? Text(
+                                user.displayName!.isNotEmpty
+                                    ? user.displayName![0].toUpperCase()
+                                    : '',
+                                style: TextStyle(
+                                  color: AppColorsTheme.white,
+                                  fontSize: 80,
+                                ),
+                              )
+                            : null,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            user.displayName ?? '',
+                            style: TextStyle(
+                              color: AppColorsTheme.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () async {
+                              final value = await showInputdialog(context,
+                                  intialValue:
+                                      sessionProvider.read.user!.displayName ??
+                                          '');
+                              if (value != null) {
+                                ProgressDialog.show(context);
+                                final user = await sessionProvider.read
+                                    .updateDisplayName(value);
+                                Navigator.pop(context);
+                                if (user == null) {
+                                  Dialogs.alert(
+                                    context,
+                                    title: texts.login.error,
+                                    content:
+                                        texts.drawer.checkYourInternetConection,
+                                  );
+                                }
+                              }
+                            },
+                            icon: Icon(
+                              Icons.edit,
+                              color: AppColorsTheme.white,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   );
                 },
               ),
@@ -48,7 +103,7 @@ class MyDrawer extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  color: AppColorsTheme.kPink,
+                  color: AppColorsTheme.white,
                   width: double.infinity,
                   padding: const EdgeInsets.only(left: 8.0),
                   child: const MyDropDownButton(),

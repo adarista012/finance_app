@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ),
                               child: Text(
-                                texts.login.register,
+                                texts.login.logIn,
                                 style: TextStyle(color: AppColorsTheme.white),
                               ),
                             ),

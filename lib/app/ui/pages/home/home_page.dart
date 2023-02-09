@@ -1,6 +1,4 @@
-import 'package:finance_app/app/ui/global_controllers/session_controller.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_drawer.dart';
-import 'package:finance_app/app/ui/pages/home/widgets/my_dropdown_button.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_floating_action_button.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_header.dart';
 import 'package:flutter/material.dart';

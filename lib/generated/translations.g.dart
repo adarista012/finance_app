@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 6
-/// Strings: 234 (39 per locale)
+/// Strings: 252 (42 per locale)
 ///
-/// Built on 2023-02-06 at 02:11 UTC
+/// Built on 2023-02-09 at 12:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -167,7 +167,10 @@ class _TranslationsDrawerEs {
 	final _TranslationsEs _root; // ignore: unused_field
 
 	// Translations
+	String get cancel => 'Cancelar';
+	String get checkYourInternetConection => 'Revisa tu conexión a internet';
 	String get languageAndRegion => 'Idioma y región';
+	String get save => 'Guardar';
 }
 
 // Path: homeDropDownButton
@@ -273,7 +276,10 @@ class _TranslationsDrawerEn implements _TranslationsDrawerEs {
 	@override final _TranslationsEn _root; // ignore: unused_field
 
 	// Translations
+	@override String get cancel => 'Cancel';
+	@override String get checkYourInternetConection => 'Check your internet conection';
 	@override String get languageAndRegion => 'Language & region';
+	@override String get save => 'Save';
 }
 
 // Path: homeDropDownButton
@@ -379,7 +385,10 @@ class _TranslationsDrawerEnBo implements _TranslationsDrawerEs {
 	@override final _TranslationsEnBo _root; // ignore: unused_field
 
 	// Translations
+	@override String get cancel => 'Cancel';
+	@override String get checkYourInternetConection => 'Check your internet conection';
 	@override String get languageAndRegion => 'Language & region';
+	@override String get save => 'Save';
 }
 
 // Path: homeDropDownButton
@@ -485,7 +494,10 @@ class _TranslationsDrawerEnUs implements _TranslationsDrawerEs {
 	@override final _TranslationsEnUs _root; // ignore: unused_field
 
 	// Translations
+	@override String get cancel => 'Cancel';
+	@override String get checkYourInternetConection => 'Check your internet conection';
 	@override String get languageAndRegion => 'Language & region';
+	@override String get save => 'Save';
 }
 
 // Path: homeDropDownButton
@@ -591,7 +603,10 @@ class _TranslationsDrawerEsBo implements _TranslationsDrawerEs {
 	@override final _TranslationsEsBo _root; // ignore: unused_field
 
 	// Translations
+	@override String get cancel => 'Cancelar';
+	@override String get checkYourInternetConection => 'Revisa tu conexión a internet';
 	@override String get languageAndRegion => 'Idioma y región';
+	@override String get save => 'Guardar';
 }
 
 // Path: homeDropDownButton
@@ -697,7 +712,10 @@ class _TranslationsDrawerEsUs implements _TranslationsDrawerEs {
 	@override final _TranslationsEsUs _root; // ignore: unused_field
 
 	// Translations
+	@override String get cancel => 'Cancelar';
+	@override String get checkYourInternetConection => 'Revisa tu conexión a internet';
 	@override String get languageAndRegion => 'Idioma y región';
+	@override String get save => 'Guardar';
 }
 
 // Path: homeDropDownButton
@@ -771,7 +789,10 @@ class _TranslationsHomeEsUs implements _TranslationsHomeEs {
 extension on _TranslationsEs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'drawer.cancel': return 'Cancelar';
+			case 'drawer.checkYourInternetConection': return 'Revisa tu conexión a internet';
 			case 'drawer.languageAndRegion': return 'Idioma y región';
+			case 'drawer.save': return 'Guardar';
 			case 'homeDropDownButton.spanish': return 'Español';
 			case 'homeDropDownButton.spanishBo': return 'Español Bo';
 			case 'homeDropDownButton.spanishUs': return 'Español US';
@@ -818,7 +839,10 @@ extension on _TranslationsEs {
 extension on _TranslationsEn {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'drawer.cancel': return 'Cancel';
+			case 'drawer.checkYourInternetConection': return 'Check your internet conection';
 			case 'drawer.languageAndRegion': return 'Language & region';
+			case 'drawer.save': return 'Save';
 			case 'homeDropDownButton.spanish': return 'Spanish';
 			case 'homeDropDownButton.spanishBo': return 'Spanish Bo';
 			case 'homeDropDownButton.spanishUs': return 'Spanish US';
@@ -865,7 +889,10 @@ extension on _TranslationsEn {
 extension on _TranslationsEnBo {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'drawer.cancel': return 'Cancel';
+			case 'drawer.checkYourInternetConection': return 'Check your internet conection';
 			case 'drawer.languageAndRegion': return 'Language & region';
+			case 'drawer.save': return 'Save';
 			case 'homeDropDownButton.spanish': return 'Spanish';
 			case 'homeDropDownButton.spanishBo': return 'Spanish Bo';
 			case 'homeDropDownButton.spanishUs': return 'Spanish US';
@@ -912,7 +939,10 @@ extension on _TranslationsEnBo {
 extension on _TranslationsEnUs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'drawer.cancel': return 'Cancel';
+			case 'drawer.checkYourInternetConection': return 'Check your internet conection';
 			case 'drawer.languageAndRegion': return 'Language & region';
+			case 'drawer.save': return 'Save';
 			case 'homeDropDownButton.spanish': return 'Spanish';
 			case 'homeDropDownButton.spanishBo': return 'Spanish Bo';
 			case 'homeDropDownButton.spanishUs': return 'Spanish US';
@@ -959,7 +989,10 @@ extension on _TranslationsEnUs {
 extension on _TranslationsEsBo {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'drawer.cancel': return 'Cancelar';
+			case 'drawer.checkYourInternetConection': return 'Revisa tu conexión a internet';
 			case 'drawer.languageAndRegion': return 'Idioma y región';
+			case 'drawer.save': return 'Guardar';
 			case 'homeDropDownButton.spanish': return 'Español';
 			case 'homeDropDownButton.spanishBo': return 'Español Bo';
 			case 'homeDropDownButton.spanishUs': return 'Español US';
@@ -1006,7 +1039,10 @@ extension on _TranslationsEsBo {
 extension on _TranslationsEsUs {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
+			case 'drawer.cancel': return 'Cancelar';
+			case 'drawer.checkYourInternetConection': return 'Revisa tu conexión a internet';
 			case 'drawer.languageAndRegion': return 'Idioma y región';
+			case 'drawer.save': return 'Guardar';
 			case 'homeDropDownButton.spanish': return 'Español';
 			case 'homeDropDownButton.spanishBo': return 'Español Bo';
 			case 'homeDropDownButton.spanishUs': return 'Español US';

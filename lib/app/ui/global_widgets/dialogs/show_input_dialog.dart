@@ -1,3 +1,4 @@
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -5,7 +6,7 @@ import 'package:flutter/material.dart';
 
 Future<String?> showInputdialog(BuildContext context,
     {String? title, String? intialValue}) async {
-  String value = intialValue ?? '';
+  String value = intialValue ?? AppConstants.empty;
   TextEditingController controller = TextEditingController();
   controller.text = value;
   final result = defaultTargetPlatform != TargetPlatform.iOS

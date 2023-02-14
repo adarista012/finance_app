@@ -6,6 +6,7 @@ import 'package:finance_app/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:finance_app/app/ui/global_widgets/dialogs/show_input_dialog.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_dropdown_button.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
@@ -43,7 +44,7 @@ class MyDrawer extends StatelessWidget {
                                           ? user.displayName![0].toUpperCase()
                                           : user.email != null
                                               ? user.email![0].toUpperCase()
-                                              : '',
+                                              : AppConstants.empty,
                                       style: TextStyle(
                                         color: AppColorsTheme.white,
                                         fontSize: 80,
@@ -59,7 +60,7 @@ class MyDrawer extends StatelessWidget {
                                           ? user.displayName![0].toUpperCase()
                                           : user.email != null
                                               ? user.email![0].toUpperCase()
-                                              : '',
+                                              : AppConstants.empty,
                                       style: TextStyle(
                                         color: AppColorsTheme.white,
                                         fontSize: 80,
@@ -71,7 +72,7 @@ class MyDrawer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            user.displayName ?? 'nick name',
+                            user.displayName ?? AppConstants.nickName,
                             style: TextStyle(
                               color: AppColorsTheme.white,
                               fontWeight: FontWeight.bold,
@@ -82,7 +83,7 @@ class MyDrawer extends StatelessWidget {
                               final value = await showInputdialog(context,
                                   intialValue:
                                       sessionProvider.read.user!.displayName ??
-                                          '');
+                                          AppConstants.empty);
                               if (value != null) {
                                 ProgressDialog.show(context);
                                 final user = await sessionProvider.read
@@ -118,8 +119,16 @@ class MyDrawer extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(8.0),
                   alignment: Alignment.centerLeft,
-                  child: Text(
-                    texts.drawer.languageAndRegion,
+                  child: Row(
+                    children: [
+                      Text(
+                        '${texts.drawer.languageAndRegion} ',
+                      ),
+                      Icon(
+                        Icons.language,
+                        color: Colors.grey.shade800,
+                      ),
+                    ],
                   ),
                 ),
                 Container(

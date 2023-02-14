@@ -1,4 +1,5 @@
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class _CustomInputFileState extends State<CustomInputFile> {
     return FormField<String>(
         autovalidateMode: AutovalidateMode.onUserInteraction,
         validator: widget.validator,
-        initialValue: '',
+        initialValue: AppConstants.empty,
         builder: (state) {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +69,7 @@ class _CustomInputFileState extends State<CustomInputFile> {
                         ),
                 ),
               ),
-              if (state.hasError) 
+              if (state.hasError)
                 Text(
                   state.errorText!,
                   style: TextStyle(

@@ -1,8 +1,11 @@
+import 'package:finance_app/app/ui/global_controllers/language_controller.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:finance_app/app/utils/inject_depedencies.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/number_symbols.dart';
 import 'package:intl/number_symbols_data.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'app/my_app.dart';
 import 'dart:ui' as ui;
 import 'package:firebase_core/firebase_core.dart';
@@ -16,13 +19,8 @@ Future<void> main() async {
     name: 'antonio',
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  final languageCode = ui.window.locale.languageCode;
-  final countryCode = ui.window.locale.countryCode;
-  String defaultLocale = languageCode;
-  if (countryCode != null) {
-    defaultLocale += '_$countryCode';
-  }
-  Intl.defaultLocale = defaultLocale;
+
+  Intl.defaultLocale = await languageProvider.read.getIntlDefaultLocale();
 
   numberFormatSymbols['es_BO'] = const NumberSymbols(
     NAME: "es_BO",

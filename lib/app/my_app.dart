@@ -1,4 +1,4 @@
-import 'package:finance_app/app/ui/global_controllers/language_controllerr.dart';
+import 'package:finance_app/app/ui/global_controllers/language_controller.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: AppLocaleUtils.supportedLocales,
       locale: context.language,
-      //  TranslationProvider.of(context).flutterLocale,
     );
   }
 }

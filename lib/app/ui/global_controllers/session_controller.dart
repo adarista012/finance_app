@@ -1,6 +1,5 @@
 import 'package:finance_app/app/domain/repositories/account_repository.dart';
 import 'package:finance_app/app/domain/repositories/authentication_repository.dart';
-import 'package:finance_app/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_meedu/meedu.dart';

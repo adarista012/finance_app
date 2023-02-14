@@ -6,6 +6,7 @@ import 'package:finance_app/app/ui/global_widgets/dialogs/dialogs.dart';
 import 'package:finance_app/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:finance_app/app/ui/pages/reset_password/controller/reset_password_provider.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:finance_app/app/utils/email_validator.dart';
 import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
@@ -80,7 +81,7 @@ void _submit(BuildContext context) async {
         content: texts.login.emailSent,
       );
     } else {
-      String errorMessage = '';
+      String errorMessage = AppConstants.empty;
       switch (respone) {
         case ResetPasswordResponse.networkRequestFailed:
           errorMessage = texts.login.networkRequestFailed;

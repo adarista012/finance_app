@@ -26,13 +26,6 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
         _completer.complete();
       }
       _user = user;
-      // if (user == null) {
-      //   _user = user;
-      //   print('User is currently signed out!');
-      // } else {
-      //   _user = user;
-      //   print('User is signed in!');
-      // }
     });
   }
 

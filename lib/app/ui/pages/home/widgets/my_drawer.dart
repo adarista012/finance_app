@@ -134,8 +134,9 @@ class MyDrawer extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(vertical: 32.0),
                   width: double.infinity,
                   child: TextButton(
-                    onPressed: () {
-                      sessionProvider.read.signOut();
+                    onPressed: () async {
+                      ProgressDialog.show(context);
+                      await sessionProvider.read.signOut();
                     },
                     child: Text(
                       texts.login.logOut,

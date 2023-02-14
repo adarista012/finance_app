@@ -1,5 +1,6 @@
 import 'package:finance_app/app/domain/repositories/account_repository.dart';
 import 'package:finance_app/app/domain/repositories/authentication_repository.dart';
+import 'package:finance_app/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_meedu/meedu.dart';
@@ -29,7 +30,10 @@ class SessionController extends SimpleNotifier {
   Future<void> signOut() async {
     await _authenticationRepository.singOut();
     _user = null;
-    router.pushNamedAndRemoveUntil(Routes.LOGIN);
+    router.pushNamedAndRemoveUntil(
+      Routes.LOGIN,
+      transition: Transition.fadeIn,
+    );
   }
 }
 

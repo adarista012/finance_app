@@ -33,25 +33,45 @@ class MyDrawer extends StatelessWidget {
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      CircleAvatar(
-                        radius: 56,
-                        child: user!.photoURL == null
-                            ? Text(
-                                user.displayName!.isNotEmpty
-                                    ? user.displayName![0].toUpperCase()
-                                    : '',
-                                style: TextStyle(
-                                  color: AppColorsTheme.white,
-                                  fontSize: 80,
-                                ),
-                              )
-                            : null,
-                      ),
+                      user?.photoURL != null
+                          ? CircleAvatar(
+                              radius: 56,
+                              backgroundImage: NetworkImage(user!.photoURL!),
+                              child: user.photoURL == null
+                                  ? Text(
+                                      user.displayName != null
+                                          ? user.displayName![0].toUpperCase()
+                                          : user.email != null
+                                              ? user.email![0].toUpperCase()
+                                              : '',
+                                      style: TextStyle(
+                                        color: AppColorsTheme.white,
+                                        fontSize: 80,
+                                      ),
+                                    )
+                                  : null,
+                            )
+                          : CircleAvatar(
+                              radius: 56,
+                              child: user!.photoURL == null
+                                  ? Text(
+                                      user.displayName != null
+                                          ? user.displayName![0].toUpperCase()
+                                          : user.email != null
+                                              ? user.email![0].toUpperCase()
+                                              : '',
+                                      style: TextStyle(
+                                        color: AppColorsTheme.white,
+                                        fontSize: 80,
+                                      ),
+                                    )
+                                  : null,
+                            ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            user.displayName ?? '',
+                            user.displayName ?? 'nick name',
                             style: TextStyle(
                               color: AppColorsTheme.white,
                               fontWeight: FontWeight.bold,

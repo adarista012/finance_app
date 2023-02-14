@@ -1,10 +1,13 @@
 import 'package:finance_app/app/ui/global_widgets/custom_input_flied.dart';
+import 'package:finance_app/app/ui/global_widgets/social_icon_button.dart';
 import 'package:finance_app/app/ui/pages/register/controller/register_controller.dart';
 import 'package:finance_app/app/ui/pages/register/controller/register_provider.dart';
 import 'package:finance_app/app/ui/pages/register/utils/send_register.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:finance_app/app/utils/email_validator.dart';
+import 'package:finance_app/app/utils/social_icons_icons.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:finance_app/generated/translations.g.dart';
@@ -117,6 +120,45 @@ class RegisterPage extends StatelessWidget {
                           ),
                           const SizedBox(
                             height: 16.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text('Or sign up with'),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SocialIconButton(
+                                onPressed: () {},
+                                color: Colors.blueAccent,
+                                icon: Icon(
+                                  SocialIcons.facebook,
+                                  color: AppColorsTheme.white,
+                                ),
+                              ),
+                              SocialIconButton(
+                                onPressed: () {},
+                                color: Colors.redAccent,
+                                icon: Icon(
+                                  SocialIcons.google,
+                                  color: AppColorsTheme.white,
+                                ),
+                              ),
+                              if (defaultTargetPlatform == TargetPlatform.iOS)
+                                SocialIconButton(
+                                  onPressed: () {},
+                                  color: Colors.black,
+                                  icon: Icon(
+                                    SocialIcons.apple,
+                                    color: AppColorsTheme.white,
+                                  ),
+                                ),
+                            ],
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

@@ -1,11 +1,14 @@
 import 'package:finance_app/app/ui/global_widgets/custom_input_flied.dart';
+import 'package:finance_app/app/ui/global_widgets/social_icon_button.dart';
 import 'package:finance_app/app/ui/pages/login/controller/login_controller.dart';
 import 'package:finance_app/app/ui/pages/login/controller/login_provider.dart';
 import 'package:finance_app/app/ui/pages/login/utils/send_login_form.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:finance_app/app/utils/email_validator.dart';
+import 'package:finance_app/app/utils/social_icons_icons.dart';
 import 'package:finance_app/generated/translations.g.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 
@@ -18,17 +21,7 @@ class LoginPage extends StatelessWidget {
       provider: loginProvider,
       builder: (_, controller) {
         return Scaffold(
-          // appBar: AppBar(),
-          body:
-              // Center(
-              //   child: MaterialButton(
-              //     onPressed: () {
-              //       router.pushNamed( Routes.REGISTER );
-              //     },
-              //     child: Text(texts.login.signUp),
-              //   ),
-              // ),
-              GestureDetector(
+          body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
             child: Container(
               height: double.infinity,
@@ -55,79 +48,118 @@ class LoginPage extends StatelessWidget {
                     ),
                     Expanded(
                       flex: 1,
-                      child: Container(
-                        color: AppColorsTheme.white,
-                        child: ListView(
-                          padding: const EdgeInsets.all(8.0),
-                          children: [
-                            CustomInputFile(
-                              label: texts.login.email,
-                              onChanged: controller.onEmailChanged,
-                              inputType: TextInputType.emailAddress,
-                              validator: (text) {
-                                if (isValidEmail(text!)) {
-                                  return null;
-                                } else {
-                                  return texts.login.invalidEmail;
-                                }
-                              },
+                      child: ListView(
+                        padding: const EdgeInsets.all(8.0),
+                        children: [
+                          Container(
+                            height: 32.0,
+                          ),
+                          CustomInputFile(
+                            label: texts.login.email,
+                            onChanged: controller.onEmailChanged,
+                            inputType: TextInputType.emailAddress,
+                            validator: (text) {
+                              if (isValidEmail(text!)) {
+                                return null;
+                              } else {
+                                return texts.login.invalidEmail;
+                              }
+                            },
+                          ),
+                          CustomInputFile(
+                            label: texts.login.password,
+                            onChanged: controller.onPasswordChanged,
+                            isPassword: true,
+                            validator: (text) {
+                              if (text!.trim().length >= 6) {
+                                return null;
+                              } else {
+                                return texts.login.invalidPassword;
+                              }
+                            },
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          MaterialButton(
+                            onPressed: () => sendLoginForm(context),
+                            color: AppColorsTheme.kPink,
+                            minWidth: double.infinity,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(16.0),
+                              ),
                             ),
-                            CustomInputFile(
-                              label: texts.login.password,
-                              onChanged: controller.onPasswordChanged,
-                              isPassword: true,
-                              validator: (text) {
-                                if (text!.trim().length >= 6) {
-                                  return null;
-                                } else {
-                                  return texts.login.invalidPassword;
-                                }
-                              },
+                            child: Text(
+                              texts.login.logIn,
+                              style: TextStyle(color: AppColorsTheme.white),
                             ),
-                            const SizedBox(
-                              height: 16.0,
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              router.pushNamed(Routes.RESET_PASSWORD);
+                            },
+                            child: Text(
+                              '${texts.login.forgotYourPassword}?',
                             ),
-                            MaterialButton(
-                              onPressed: () => sendLoginForm(context),
-                              color: AppColorsTheme.kPink,
-                              minWidth: double.infinity,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(16.0),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text('Or sign up with'),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 16.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SocialIconButton(
+                                onPressed: () {},
+                                color: Colors.blueAccent,
+                                icon: Icon(
+                                  SocialIcons.facebook,
+                                  color: AppColorsTheme.white,
                                 ),
                               ),
-                              child: Text(
-                                texts.login.logIn,
-                                style: TextStyle(color: AppColorsTheme.white),
+                              SocialIconButton(
+                                onPressed: () {},
+                                color: Colors.redAccent,
+                                icon: Icon(
+                                  SocialIcons.google,
+                                  color: AppColorsTheme.white,
+                                ),
                               ),
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                router.pushNamed(Routes.RESET_PASSWORD);
-                              },
-                              child: Text(
-                                '${texts.login.forgotYourPassword}?',
-                              ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text('${texts.login.dontHaveAnAccount}?'),
-                                TextButton(
-                                  onPressed: () {
-                                    router.pushNamedAndRemoveUntil(
-                                      Routes.REGISTER,
-                                      transition: Transition.downToUp,
-                                    );
-                                  },
-                                  child: Text(
-                                    texts.login.signUp,
+                              if (defaultTargetPlatform == TargetPlatform.iOS)
+                                SocialIconButton(
+                                  onPressed: () {},
+                                  color: Colors.black,
+                                  icon: Icon(
+                                    SocialIcons.apple,
+                                    color: AppColorsTheme.white,
                                   ),
                                 ),
-                              ],
-                            ),
-                          ],
-                        ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('${texts.login.dontHaveAnAccount}?'),
+                              TextButton(
+                                onPressed: () {
+                                  router.pushNamedAndRemoveUntil(
+                                    Routes.REGISTER,
+                                    transition: Transition.downToUp,
+                                  );
+                                },
+                                child: Text(
+                                  texts.login.signUp,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ],

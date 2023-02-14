@@ -9,7 +9,7 @@ class ResetPasswordController extends SimpleNotifier {
   final _authenticationRepository = Get.find<AuthenticationRepository>();
 
   void onEmailChanged(String text) {
-    _email = text;
+    _email = text.trim();
   }
 
   Future<ResetPasswordResponse> submit() {

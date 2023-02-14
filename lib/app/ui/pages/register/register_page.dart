@@ -5,7 +5,6 @@ import 'package:finance_app/app/ui/pages/register/utils/send_register.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
 import 'package:finance_app/app/utils/email_validator.dart';
-import 'package:finance_app/app/utils/name_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:finance_app/generated/translations.g.dart';
@@ -28,28 +27,38 @@ class RegisterPage extends StatelessWidget {
               child: Form(
                 key: controller.formKey,
                 child: Column(
-                  // padding: const EdgeInsets.all(8.0),
                   children: [
                     Expanded(
-                        flex: 2,
-                        child: Container(
-                          color: AppColorsTheme.white,
-                        )),
+                      flex: 1,
+                      child: Container(
+                        color: AppColorsTheme.white,
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        child: const Text(
+                          'Costometro',
+                          style: TextStyle(
+                            color: AppColorsTheme.kPink,
+                            fontSize: 32,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ),
                     Expanded(
-                      flex: 5,
+                      flex: 1,
                       child: ListView(
                         padding: const EdgeInsets.all(8.0),
                         children: [
-                          CustomInputFile(
-                            onChanged: controller.onNameChanged,
-                            label: texts.login.name,
-                            inputType: TextInputType.emailAddress,
-                            validator: (text) {
-                              return isValidName(text!)
-                                  ? null
-                                  : texts.login.invalidName;
-                            },
-                          ),
+                          // CustomInputFile(
+                          //   onChanged: controller.onNameChanged,
+                          //   label: texts.login.name,
+                          //   inputType: TextInputType.emailAddress,
+                          //   validator: (text) {
+                          //     return isValidName(text!)
+                          //         ? null
+                          //         : texts.login.invalidName;
+                          //   },
+                          // ),
                           CustomInputFile(
                             onChanged: controller.onEmailChanged,
                             label: texts.login.email,
@@ -115,7 +124,10 @@ class RegisterPage extends StatelessWidget {
                               Text('${texts.login.alreadyHaveAnAccount}?'),
                               TextButton(
                                 onPressed: () {
-                                  router.pushNamedAndRemoveUntil(Routes.LOGIN);
+                                  router.pushNamedAndRemoveUntil(
+                                    Routes.LOGIN,
+                                    transition: Transition.downToUp,
+                                  );
                                 },
                                 child: Text(texts.login.signIn),
                               ),

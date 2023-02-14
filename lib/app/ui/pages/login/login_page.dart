@@ -34,18 +34,17 @@ class LoginPage extends StatelessWidget {
               height: double.infinity,
               width: double.infinity,
               color: AppColorsTheme.white,
-              padding: const EdgeInsets.all(8.0),
               child: Form(
                 key: controller.formKey,
                 child: Column(
                   children: [
                     Expanded(
-                      flex: 2,
+                      flex: 1,
                       child: Container(
                         width: double.infinity,
                         alignment: Alignment.center,
                         child: const Text(
-                          'Finance App',
+                          'Costometro',
                           style: TextStyle(
                             color: AppColorsTheme.kPink,
                             fontSize: 32,
@@ -55,10 +54,11 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      flex: 4,
+                      flex: 1,
                       child: Container(
                         color: AppColorsTheme.white,
                         child: ListView(
+                          padding: const EdgeInsets.all(8.0),
                           children: [
                             CustomInputFile(
                               label: texts.login.email,
@@ -116,7 +116,9 @@ class LoginPage extends StatelessWidget {
                                 TextButton(
                                   onPressed: () {
                                     router.pushNamedAndRemoveUntil(
-                                        Routes.REGISTER);
+                                      Routes.REGISTER,
+                                      transition: Transition.downToUp,
+                                    );
                                   },
                                   child: Text(
                                     texts.login.signUp,

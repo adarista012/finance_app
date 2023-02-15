@@ -1,13 +1,10 @@
 import 'package:finance_app/app/ui/global_controllers/language_controller.dart';
-import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:finance_app/app/utils/inject_depedencies.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/number_symbols.dart';
 import 'package:intl/number_symbols_data.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'app/my_app.dart';
-import 'dart:ui' as ui;
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'generated/translations.g.dart';

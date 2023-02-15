@@ -16,6 +16,8 @@
     "logOut" : "Log out",
     "name" : "Name",
     "networkRequestFailed" : "Network request failed",
+    "orSignInWith": "Or sign in with",
+    "orSignUpWith": "Or sign up with", 
     "ok" : "OK",
     "password" : "Password",
     "passwordDontMatch" : "password don't match",

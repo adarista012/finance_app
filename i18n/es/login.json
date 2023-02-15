@@ -16,6 +16,8 @@
     "logOut" : "Cerrar sesión",
     "name" : "Nombre",
     "networkRequestFailed" : "Fallo en la solicitud de red",
+    "orSignInWith": "O accede con",
+    "orSignUpWith": "O regístrate con",
     "ok" : "OK",
     "password" : "Contraseña",
     "passwordDontMatch" : "no coincide la contraseña",

@@ -5,12 +5,14 @@ import 'package:finance_app/app/ui/pages/login/controller/login_provider.dart';
 import 'package:finance_app/app/ui/pages/login/utils/send_login_form.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:finance_app/app/utils/email_validator.dart';
 import 'package:finance_app/app/utils/social_icons_icons.dart';
 import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -36,12 +38,18 @@ class LoginPage extends StatelessWidget {
                       child: Container(
                         width: double.infinity,
                         alignment: Alignment.center,
-                        child: const Text(
-                          'Costometro',
-                          style: TextStyle(
+                        child: Text(
+                          AppConstants.nameOfApp,
+                          style: GoogleFonts.ubuntu(
                             color: AppColorsTheme.kPink,
-                            fontSize: 32,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            shadows: [
+                              Shadow(
+                                  color: AppColorsTheme.grey,
+                                  blurRadius: 16,
+                                  offset: const Offset(0, 8.0)),
+                            ],
                           ),
                         ),
                       ),
@@ -105,8 +113,10 @@ class LoginPage extends StatelessWidget {
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text('Or sign up with'),
+                            children: [
+                              Text(
+                                texts.login.orSignInWith,
+                              ),
                             ],
                           ),
                           const SizedBox(
@@ -150,7 +160,7 @@ class LoginPage extends StatelessWidget {
                                 onPressed: () {
                                   router.pushNamedAndRemoveUntil(
                                     Routes.REGISTER,
-                                    transition: Transition.downToUp,
+                                    transition: Transition.upToDown,
                                   );
                                 },
                                 child: Text(

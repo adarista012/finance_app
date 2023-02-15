@@ -1,4 +1,5 @@
 class AppConstants {
+  static const String nameOfApp = 'Costometro';
   static const String defaultCountry = '_BO';
   static const String emailAlreadyInUse = 'email-already-in-use';
   static const String empty = '';

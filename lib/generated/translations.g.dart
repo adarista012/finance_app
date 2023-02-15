@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 6
-/// Strings: 252 (42 per locale)
+/// Strings: 264 (44 per locale)
 ///
-/// Built on 2023-02-09 at 12:21 UTC
+/// Built on 2023-02-15 at 16:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -212,6 +212,8 @@ class _TranslationsLoginEs {
 	String get logOut => 'Cerrar sesión';
 	String get name => 'Nombre';
 	String get networkRequestFailed => 'Fallo en la solicitud de red';
+	String get orSignInWith => 'O accede con';
+	String get orSignUpWith => 'O regístrate con';
 	String get ok => 'OK';
 	String get password => 'Contraseña';
 	String get passwordDontMatch => 'no coincide la contraseña';
@@ -321,6 +323,8 @@ class _TranslationsLoginEn implements _TranslationsLoginEs {
 	@override String get logOut => 'Log out';
 	@override String get name => 'Name';
 	@override String get networkRequestFailed => 'Network request failed';
+	@override String get orSignInWith => 'Or sign in with';
+	@override String get orSignUpWith => 'Or sign up with';
 	@override String get ok => 'OK';
 	@override String get password => 'Password';
 	@override String get passwordDontMatch => 'password don\'t match';
@@ -430,6 +434,8 @@ class _TranslationsLoginEnBo implements _TranslationsLoginEs {
 	@override String get logOut => 'Log out';
 	@override String get name => 'Name';
 	@override String get networkRequestFailed => 'Network request failed';
+	@override String get orSignInWith => 'Or sign in with';
+	@override String get orSignUpWith => 'Or sign up with';
 	@override String get ok => 'OK';
 	@override String get password => 'Password';
 	@override String get passwordDontMatch => 'password don\'t match';
@@ -539,6 +545,8 @@ class _TranslationsLoginEnUs implements _TranslationsLoginEs {
 	@override String get logOut => 'Log out';
 	@override String get name => 'Name';
 	@override String get networkRequestFailed => 'Network request failed';
+	@override String get orSignInWith => 'Or sign in with';
+	@override String get orSignUpWith => 'Or sign up with';
 	@override String get ok => 'OK';
 	@override String get password => 'Password';
 	@override String get passwordDontMatch => 'password don\'t match';
@@ -648,6 +656,8 @@ class _TranslationsLoginEsBo implements _TranslationsLoginEs {
 	@override String get logOut => 'Cerrar sesión';
 	@override String get name => 'Nombre';
 	@override String get networkRequestFailed => 'Fallo en la solicitud de red';
+	@override String get orSignInWith => 'O accede con';
+	@override String get orSignUpWith => 'O regístrate con';
 	@override String get ok => 'OK';
 	@override String get password => 'Contraseña';
 	@override String get passwordDontMatch => 'no coincide la contraseña';
@@ -757,6 +767,8 @@ class _TranslationsLoginEsUs implements _TranslationsLoginEs {
 	@override String get logOut => 'Cerrar sesión';
 	@override String get name => 'Nombre';
 	@override String get networkRequestFailed => 'Fallo en la solicitud de red';
+	@override String get orSignInWith => 'O accede con';
+	@override String get orSignUpWith => 'O regístrate con';
 	@override String get ok => 'OK';
 	@override String get password => 'Contraseña';
 	@override String get passwordDontMatch => 'no coincide la contraseña';
@@ -816,6 +828,8 @@ extension on _TranslationsEs {
 			case 'login.logOut': return 'Cerrar sesión';
 			case 'login.name': return 'Nombre';
 			case 'login.networkRequestFailed': return 'Fallo en la solicitud de red';
+			case 'login.orSignInWith': return 'O accede con';
+			case 'login.orSignUpWith': return 'O regístrate con';
 			case 'login.ok': return 'OK';
 			case 'login.password': return 'Contraseña';
 			case 'login.passwordDontMatch': return 'no coincide la contraseña';
@@ -866,6 +880,8 @@ extension on _TranslationsEn {
 			case 'login.logOut': return 'Log out';
 			case 'login.name': return 'Name';
 			case 'login.networkRequestFailed': return 'Network request failed';
+			case 'login.orSignInWith': return 'Or sign in with';
+			case 'login.orSignUpWith': return 'Or sign up with';
 			case 'login.ok': return 'OK';
 			case 'login.password': return 'Password';
 			case 'login.passwordDontMatch': return 'password don\'t match';
@@ -916,6 +932,8 @@ extension on _TranslationsEnBo {
 			case 'login.logOut': return 'Log out';
 			case 'login.name': return 'Name';
 			case 'login.networkRequestFailed': return 'Network request failed';
+			case 'login.orSignInWith': return 'Or sign in with';
+			case 'login.orSignUpWith': return 'Or sign up with';
 			case 'login.ok': return 'OK';
 			case 'login.password': return 'Password';
 			case 'login.passwordDontMatch': return 'password don\'t match';
@@ -966,6 +984,8 @@ extension on _TranslationsEnUs {
 			case 'login.logOut': return 'Log out';
 			case 'login.name': return 'Name';
 			case 'login.networkRequestFailed': return 'Network request failed';
+			case 'login.orSignInWith': return 'Or sign in with';
+			case 'login.orSignUpWith': return 'Or sign up with';
 			case 'login.ok': return 'OK';
 			case 'login.password': return 'Password';
 			case 'login.passwordDontMatch': return 'password don\'t match';
@@ -1016,6 +1036,8 @@ extension on _TranslationsEsBo {
 			case 'login.logOut': return 'Cerrar sesión';
 			case 'login.name': return 'Nombre';
 			case 'login.networkRequestFailed': return 'Fallo en la solicitud de red';
+			case 'login.orSignInWith': return 'O accede con';
+			case 'login.orSignUpWith': return 'O regístrate con';
 			case 'login.ok': return 'OK';
 			case 'login.password': return 'Contraseña';
 			case 'login.passwordDontMatch': return 'no coincide la contraseña';
@@ -1066,6 +1088,8 @@ extension on _TranslationsEsUs {
 			case 'login.logOut': return 'Cerrar sesión';
 			case 'login.name': return 'Nombre';
 			case 'login.networkRequestFailed': return 'Fallo en la solicitud de red';
+			case 'login.orSignInWith': return 'O accede con';
+			case 'login.orSignUpWith': return 'O regístrate con';
 			case 'login.ok': return 'OK';
 			case 'login.password': return 'Contraseña';
 			case 'login.passwordDontMatch': return 'no coincide la contraseña';

@@ -5,12 +5,14 @@ import 'package:finance_app/app/ui/pages/register/controller/register_provider.d
 import 'package:finance_app/app/ui/pages/register/utils/send_register.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:finance_app/app/utils/email_validator.dart';
 import 'package:finance_app/app/utils/social_icons_icons.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:finance_app/generated/translations.g.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -37,12 +39,18 @@ class RegisterPage extends StatelessWidget {
                         color: AppColorsTheme.white,
                         width: double.infinity,
                         alignment: Alignment.center,
-                        child: const Text(
-                          'Costometro',
-                          style: TextStyle(
+                        child: Text(
+                          AppConstants.nameOfApp,
+                          style: GoogleFonts.ubuntu(
                             color: AppColorsTheme.kPink,
-                            fontSize: 32,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 48,
+                            fontWeight: FontWeight.bold,
+                            shadows: [
+                              Shadow(
+                                  color: AppColorsTheme.grey,
+                                  blurRadius: 16,
+                                  offset: const Offset(0, 8.0)),
+                            ],
                           ),
                         ),
                       ),
@@ -123,8 +131,10 @@ class RegisterPage extends StatelessWidget {
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text('Or sign up with'),
+                            children: [
+                              Text(
+                                texts.login.orSignUpWith,
+                              ),
                             ],
                           ),
                           const SizedBox(

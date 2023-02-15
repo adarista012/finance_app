@@ -25,10 +25,22 @@ class LoginPage extends StatelessWidget {
         return Scaffold(
           body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
+            onVerticalDragUpdate: (DragUpdateDetails _) {
+              router.pushNamedAndRemoveUntil(
+                Routes.REGISTER,
+                transition: Transition.upToDown,
+              );
+            },
             child: Container(
               height: double.infinity,
               width: double.infinity,
-              color: AppColorsTheme.white,
+              decoration:
+                  BoxDecoration(color: AppColorsTheme.white, boxShadow: [
+                BoxShadow(
+                    color: AppColorsTheme.grey,
+                    blurRadius: 16.0,
+                    offset: Offset(8.0, 8.0)),
+              ]),
               child: Form(
                 key: controller.formKey,
                 child: Column(

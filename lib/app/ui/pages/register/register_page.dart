@@ -25,6 +25,12 @@ class RegisterPage extends StatelessWidget {
         return Scaffold(
           body: GestureDetector(
             onTap: () => FocusScope.of(context).unfocus(),
+            onVerticalDragEnd: (DragEndDetails _) {
+              router.pushNamedAndRemoveUntil(
+                Routes.LOGIN,
+                transition: Transition.downToUp,
+              );
+            },
             child: Container(
               width: double.infinity,
               height: double.infinity,

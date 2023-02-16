@@ -2,6 +2,7 @@ import 'package:finance_app/app/ui/global_widgets/custom_input_flied.dart';
 import 'package:finance_app/app/ui/global_widgets/social_icon_button.dart';
 import 'package:finance_app/app/ui/pages/login/controller/login_controller.dart';
 import 'package:finance_app/app/ui/pages/login/controller/login_provider.dart';
+import 'package:finance_app/app/ui/pages/login/utils/log_in_with_google.dart';
 import 'package:finance_app/app/ui/pages/login/utils/send_login_form.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
@@ -60,7 +61,7 @@ class LoginPage extends StatelessWidget {
                         padding: const EdgeInsets.all(8.0),
                         children: [
                           Container(
-                            height: 32.0,
+                            height: 24.0,
                           ),
                           CustomInputFile(
                             label: texts.login.email,
@@ -134,7 +135,7 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ),
                               SocialIconButton(
-                                onPressed: () {},
+                                onPressed: () => logInWithGoogle(context),
                                 color: Colors.redAccent,
                                 icon: Icon(
                                   SocialIcons.google,

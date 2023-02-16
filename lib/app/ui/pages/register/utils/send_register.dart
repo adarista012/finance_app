@@ -18,6 +18,9 @@ Future<void> sendRegisterForm(BuildContext context) async {
     late String content;
     if (response.error != null) {
       switch (response.error!) {
+        case SignUpError.accountExistsWithDifferentCredential:
+          content = texts.login.accountExistsWithDifferentCredential;
+          break;
         case SignUpError.emailAlreadyInUse:
           content = texts.login.emailAlreadyInUse;
           break;

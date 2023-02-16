@@ -9,6 +9,9 @@ class SignInResponse {
 }
 
 enum SignInError {
+  accountExistsWithDifferentCredential,
+  invalidCredential,
+  cancelled,
   networkRequestFailed,
   userDisabled,
   userNotFound,
@@ -19,6 +22,10 @@ enum SignInError {
 
 SignInError stringToSignInError(String code) {
   switch (code) {
+    case AppConstants.accountExistsWithDifferentCredential:
+      return SignInError.accountExistsWithDifferentCredential;
+    case AppConstants.invalidCredential:
+      return SignInError.invalidCredential;
     case AppConstants.networkRequestFailed:
       return SignInError.networkRequestFailed;
     case AppConstants.userDisabled:

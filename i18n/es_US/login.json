@@ -1,4 +1,5 @@
 {
+    "accountExistsWithDifferentCredential" : "La cuenta existe con otro credencial",
     "alreadyHaveAnAccount" : "Ya tienes una cuenta",
     "dontHaveAnAccount" : "No tienes una cuenta",
     "email": "Correo electrónico",
@@ -7,6 +8,7 @@
     "error" : "Error",
     "forgotYourPassword" : "Olvidó su contraseña",
     "good" : "Bien",
+    "invalidCredential" : "Credential inválido",
     "invalidName" : "nombre inválido",
     "invalidEmail" : "correo electrónico inválido",
     "internalError" : "Error interno",

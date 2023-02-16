@@ -1,5 +1,6 @@
 import 'package:finance_app/app/ui/global_widgets/custom_input_flied.dart';
 import 'package:finance_app/app/ui/global_widgets/social_icon_button.dart';
+import 'package:finance_app/app/ui/pages/login/utils/log_in_with_google.dart';
 import 'package:finance_app/app/ui/pages/register/controller/register_controller.dart';
 import 'package:finance_app/app/ui/pages/register/controller/register_provider.dart';
 import 'package:finance_app/app/ui/pages/register/utils/send_register.dart';
@@ -152,7 +153,7 @@ class RegisterPage extends StatelessWidget {
                                 ),
                               ),
                               SocialIconButton(
-                                onPressed: () {},
+                                onPressed: () => logInWithGoogle(context),
                                 color: Colors.redAccent,
                                 icon: Icon(
                                   SocialIcons.google,

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class SocialIconButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final Color color;
   final Icon icon;
   const SocialIconButton({
     Key? key,
-    required this.onPressed,
+    this.onPressed,
     required this.color,
     required this.icon,
   }) : super(key: key);
@@ -17,7 +17,7 @@ class SocialIconButton extends StatelessWidget {
       height: 50,
       minWidth: 60,
       padding: EdgeInsets.zero,
-      onPressed: () => onPressed,
+      onPressed: onPressed,
       color: color,
       shape: const CircleBorder(),
       child: icon,

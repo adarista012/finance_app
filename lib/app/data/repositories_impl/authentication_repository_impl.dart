@@ -1,16 +1,20 @@
 import 'dart:async';
-
 import 'package:finance_app/app/domain/repositories/authentication_repository.dart';
 import 'package:finance_app/app/domain/response/reset_password_response.dart';
 import 'package:finance_app/app/domain/response/sign_in_response.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthenticationRepositoryImpl extends AuthenticationRepository {
   final FirebaseAuth _auth;
+  final GoogleSignIn _googleSignIn;
   User? _user;
 
   final Completer<void> _completer = Completer();
-  AuthenticationRepositoryImpl(this._auth) {
+  AuthenticationRepositoryImpl(
+      {required FirebaseAuth firebaseAuth, required GoogleSignIn googleSignIn})
+      : _auth = firebaseAuth,
+        _googleSignIn = googleSignIn {
     _init();
   }
 
@@ -30,7 +34,24 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
   }
 
   @override
-  Future<void> singOut() {
+  Future<void> singOut() async {
+    final data = _user?.providerData ?? [];
+    String providerId = 'firebase';
+    for (final provider in data) {
+      //password
+      //phone
+      //google.com
+      //facebook.com
+      // github.com
+      // apple.com
+      if (provider.providerId != 'firebase') {
+        providerId = provider.providerId;
+        break;
+      }
+    }
+    if (providerId == 'google.com') {
+      await _googleSignIn.signOut();
+    } else if (providerId == 'facebook.com') {}
     return _auth.signOut();
   }
 
@@ -59,6 +80,36 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
       return ResetPasswordResponse.ok;
     } on FirebaseAuthException catch (e) {
       return stringToResetPassword(e.code);
+    }
+  }
+
+  @override
+  Future<SignInResponse> signInWithGoogle() async {
+    try {
+      final account = await _googleSignIn.signIn();
+      if (account == null) {
+        return SignInResponse(
+          SignInError.cancelled,
+          null,
+        );
+      }
+      final googleAuth = await account.authentication;
+      final oAuthCredential = GoogleAuthProvider.credential(
+        idToken: googleAuth.idToken,
+        accessToken: googleAuth.accessToken,
+      );
+      final userCredential = await _auth.signInWithCredential(
+        oAuthCredential,
+      );
+      return SignInResponse(
+        null,
+        userCredential.user,
+      );
+    } on FirebaseAuthException catch (e) {
+      return SignInResponse(
+        stringToSignInError(e.code),
+        null,
+      );
     }
   }
 }

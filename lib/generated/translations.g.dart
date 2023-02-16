@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 6
-/// Strings: 264 (44 per locale)
+/// Strings: 276 (46 per locale)
 ///
-/// Built on 2023-02-15 at 16:21 UTC
+/// Built on 2023-02-15 at 17:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -195,6 +195,7 @@ class _TranslationsLoginEs {
 	final _TranslationsEs _root; // ignore: unused_field
 
 	// Translations
+	String get accountExistsWithDifferentCredential => 'La cuenta existe con otro credencial';
 	String get alreadyHaveAnAccount => 'Ya tienes una cuenta';
 	String get dontHaveAnAccount => 'No tienes una cuenta';
 	String get email => 'Correo electrónico';
@@ -203,6 +204,7 @@ class _TranslationsLoginEs {
 	String get error => 'Error';
 	String get forgotYourPassword => 'Olvidó su contraseña';
 	String get good => 'Bien';
+	String get invalidCredential => 'Credential inválido';
 	String get invalidName => 'nombre inválido';
 	String get invalidEmail => 'correo electrónico inválido';
 	String get internalError => 'Error interno';
@@ -306,6 +308,7 @@ class _TranslationsLoginEn implements _TranslationsLoginEs {
 	@override final _TranslationsEn _root; // ignore: unused_field
 
 	// Translations
+	@override String get accountExistsWithDifferentCredential => 'Account exists with different credential';
 	@override String get alreadyHaveAnAccount => 'Already have an account';
 	@override String get dontHaveAnAccount => 'Don\'t have an account';
 	@override String get email => 'Email';
@@ -314,6 +317,7 @@ class _TranslationsLoginEn implements _TranslationsLoginEs {
 	@override String get error => 'Error';
 	@override String get forgotYourPassword => 'Forgot your password';
 	@override String get good => 'Good';
+	@override String get invalidCredential => 'Invalid credential';
 	@override String get invalidEmail => 'invalid email';
 	@override String get internalError => 'Internal error';
 	@override String get invalidFields => 'invalid fields';
@@ -417,6 +421,7 @@ class _TranslationsLoginEnBo implements _TranslationsLoginEs {
 	@override final _TranslationsEnBo _root; // ignore: unused_field
 
 	// Translations
+	@override String get accountExistsWithDifferentCredential => 'Account exists with different credential';
 	@override String get alreadyHaveAnAccount => 'Already have an account';
 	@override String get dontHaveAnAccount => 'Don\'t have an account';
 	@override String get email => 'Email';
@@ -425,6 +430,7 @@ class _TranslationsLoginEnBo implements _TranslationsLoginEs {
 	@override String get error => 'Error';
 	@override String get forgotYourPassword => 'Forgot your password';
 	@override String get good => 'Good';
+	@override String get invalidCredential => 'Invalid credential';
 	@override String get invalidEmail => 'invalid email';
 	@override String get internalError => 'Internal error';
 	@override String get invalidFields => 'invalid fields';
@@ -528,6 +534,7 @@ class _TranslationsLoginEnUs implements _TranslationsLoginEs {
 	@override final _TranslationsEnUs _root; // ignore: unused_field
 
 	// Translations
+	@override String get accountExistsWithDifferentCredential => 'Account exists with different credential';
 	@override String get alreadyHaveAnAccount => 'Already have an account';
 	@override String get dontHaveAnAccount => 'Don\'t have an account';
 	@override String get email => 'Email';
@@ -536,6 +543,7 @@ class _TranslationsLoginEnUs implements _TranslationsLoginEs {
 	@override String get error => 'Error';
 	@override String get forgotYourPassword => 'Forgot your password';
 	@override String get good => 'Good';
+	@override String get invalidCredential => 'Invalid credential';
 	@override String get invalidEmail => 'invalid email';
 	@override String get internalError => 'Internal error';
 	@override String get invalidFields => 'invalid fields';
@@ -639,6 +647,7 @@ class _TranslationsLoginEsBo implements _TranslationsLoginEs {
 	@override final _TranslationsEsBo _root; // ignore: unused_field
 
 	// Translations
+	@override String get accountExistsWithDifferentCredential => 'La cuenta existe con otro credencial';
 	@override String get alreadyHaveAnAccount => 'Ya tienes una cuenta';
 	@override String get dontHaveAnAccount => 'No tienes una cuenta';
 	@override String get email => 'Correo electrónico';
@@ -647,6 +656,7 @@ class _TranslationsLoginEsBo implements _TranslationsLoginEs {
 	@override String get error => 'Error';
 	@override String get forgotYourPassword => 'Olvidó su contraseña';
 	@override String get good => 'Bien';
+	@override String get invalidCredential => 'Credential inválido';
 	@override String get invalidName => 'nombre inválido';
 	@override String get invalidEmail => 'correo electrónico inválido';
 	@override String get internalError => 'Error interno';
@@ -750,6 +760,7 @@ class _TranslationsLoginEsUs implements _TranslationsLoginEs {
 	@override final _TranslationsEsUs _root; // ignore: unused_field
 
 	// Translations
+	@override String get accountExistsWithDifferentCredential => 'La cuenta existe con otro credencial';
 	@override String get alreadyHaveAnAccount => 'Ya tienes una cuenta';
 	@override String get dontHaveAnAccount => 'No tienes una cuenta';
 	@override String get email => 'Correo electrónico';
@@ -758,6 +769,7 @@ class _TranslationsLoginEsUs implements _TranslationsLoginEs {
 	@override String get error => 'Error';
 	@override String get forgotYourPassword => 'Olvidó su contraseña';
 	@override String get good => 'Bien';
+	@override String get invalidCredential => 'Credential inválido';
 	@override String get invalidName => 'nombre inválido';
 	@override String get invalidEmail => 'correo electrónico inválido';
 	@override String get internalError => 'Error interno';
@@ -811,6 +823,7 @@ extension on _TranslationsEs {
 			case 'homeDropDownButton.english': return 'Inglés';
 			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
 			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'login.accountExistsWithDifferentCredential': return 'La cuenta existe con otro credencial';
 			case 'login.alreadyHaveAnAccount': return 'Ya tienes una cuenta';
 			case 'login.dontHaveAnAccount': return 'No tienes una cuenta';
 			case 'login.email': return 'Correo electrónico';
@@ -819,6 +832,7 @@ extension on _TranslationsEs {
 			case 'login.error': return 'Error';
 			case 'login.forgotYourPassword': return 'Olvidó su contraseña';
 			case 'login.good': return 'Bien';
+			case 'login.invalidCredential': return 'Credential inválido';
 			case 'login.invalidName': return 'nombre inválido';
 			case 'login.invalidEmail': return 'correo electrónico inválido';
 			case 'login.internalError': return 'Error interno';
@@ -863,6 +877,7 @@ extension on _TranslationsEn {
 			case 'homeDropDownButton.english': return 'English';
 			case 'homeDropDownButton.englishBo': return 'English Bo';
 			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'login.accountExistsWithDifferentCredential': return 'Account exists with different credential';
 			case 'login.alreadyHaveAnAccount': return 'Already have an account';
 			case 'login.dontHaveAnAccount': return 'Don\'t have an account';
 			case 'login.email': return 'Email';
@@ -871,6 +886,7 @@ extension on _TranslationsEn {
 			case 'login.error': return 'Error';
 			case 'login.forgotYourPassword': return 'Forgot your password';
 			case 'login.good': return 'Good';
+			case 'login.invalidCredential': return 'Invalid credential';
 			case 'login.invalidEmail': return 'invalid email';
 			case 'login.internalError': return 'Internal error';
 			case 'login.invalidFields': return 'invalid fields';
@@ -915,6 +931,7 @@ extension on _TranslationsEnBo {
 			case 'homeDropDownButton.english': return 'English';
 			case 'homeDropDownButton.englishBo': return 'English Bo';
 			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'login.accountExistsWithDifferentCredential': return 'Account exists with different credential';
 			case 'login.alreadyHaveAnAccount': return 'Already have an account';
 			case 'login.dontHaveAnAccount': return 'Don\'t have an account';
 			case 'login.email': return 'Email';
@@ -923,6 +940,7 @@ extension on _TranslationsEnBo {
 			case 'login.error': return 'Error';
 			case 'login.forgotYourPassword': return 'Forgot your password';
 			case 'login.good': return 'Good';
+			case 'login.invalidCredential': return 'Invalid credential';
 			case 'login.invalidEmail': return 'invalid email';
 			case 'login.internalError': return 'Internal error';
 			case 'login.invalidFields': return 'invalid fields';
@@ -967,6 +985,7 @@ extension on _TranslationsEnUs {
 			case 'homeDropDownButton.english': return 'English';
 			case 'homeDropDownButton.englishBo': return 'English Bo';
 			case 'homeDropDownButton.englishUs': return 'English US';
+			case 'login.accountExistsWithDifferentCredential': return 'Account exists with different credential';
 			case 'login.alreadyHaveAnAccount': return 'Already have an account';
 			case 'login.dontHaveAnAccount': return 'Don\'t have an account';
 			case 'login.email': return 'Email';
@@ -975,6 +994,7 @@ extension on _TranslationsEnUs {
 			case 'login.error': return 'Error';
 			case 'login.forgotYourPassword': return 'Forgot your password';
 			case 'login.good': return 'Good';
+			case 'login.invalidCredential': return 'Invalid credential';
 			case 'login.invalidEmail': return 'invalid email';
 			case 'login.internalError': return 'Internal error';
 			case 'login.invalidFields': return 'invalid fields';
@@ -1019,6 +1039,7 @@ extension on _TranslationsEsBo {
 			case 'homeDropDownButton.english': return 'Inglés';
 			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
 			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'login.accountExistsWithDifferentCredential': return 'La cuenta existe con otro credencial';
 			case 'login.alreadyHaveAnAccount': return 'Ya tienes una cuenta';
 			case 'login.dontHaveAnAccount': return 'No tienes una cuenta';
 			case 'login.email': return 'Correo electrónico';
@@ -1027,6 +1048,7 @@ extension on _TranslationsEsBo {
 			case 'login.error': return 'Error';
 			case 'login.forgotYourPassword': return 'Olvidó su contraseña';
 			case 'login.good': return 'Bien';
+			case 'login.invalidCredential': return 'Credential inválido';
 			case 'login.invalidName': return 'nombre inválido';
 			case 'login.invalidEmail': return 'correo electrónico inválido';
 			case 'login.internalError': return 'Error interno';
@@ -1071,6 +1093,7 @@ extension on _TranslationsEsUs {
 			case 'homeDropDownButton.english': return 'Inglés';
 			case 'homeDropDownButton.englishBo': return 'Inglés Bo';
 			case 'homeDropDownButton.englishUs': return 'Inglés US';
+			case 'login.accountExistsWithDifferentCredential': return 'La cuenta existe con otro credencial';
 			case 'login.alreadyHaveAnAccount': return 'Ya tienes una cuenta';
 			case 'login.dontHaveAnAccount': return 'No tienes una cuenta';
 			case 'login.email': return 'Correo electrónico';
@@ -1079,6 +1102,7 @@ extension on _TranslationsEsUs {
 			case 'login.error': return 'Error';
 			case 'login.forgotYourPassword': return 'Olvidó su contraseña';
 			case 'login.good': return 'Bien';
+			case 'login.invalidCredential': return 'Credential inválido';
 			case 'login.invalidName': return 'nombre inválido';
 			case 'login.invalidEmail': return 'correo electrónico inválido';
 			case 'login.internalError': return 'Error interno';

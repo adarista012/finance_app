@@ -1,6 +1,7 @@
-
+import 'package:finance_app/app/ui/global_widgets/dialogs/progress_dialog.dart';
 import 'package:finance_app/app/ui/pages/home/controller/home_provider.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'package:image_picker/image_picker.dart';
@@ -37,7 +38,7 @@ class MyModalBottomSheet extends StatelessWidget {
                     if (value != null ||
                         value!.isEmpty ||
                         RegExp(r'^[a-zA-Z]*$').hasMatch(value)) {
-                      return 'Ingrese un monto válido';
+                      return texts.homeModalBottom.enterValidAmount;
                     }
                     return null;
                   },
@@ -52,7 +53,8 @@ class MyModalBottomSheet extends StatelessWidget {
                   height: 8.0,
                 ),
                 TextFormField(
-                  decoration: const InputDecoration(hintText: 'Description'),
+                  decoration: InputDecoration(
+                      hintText: texts.homeModalBottom.description),
                   onChanged: (String str) {
                     homeProvider.read.setCurrentDetail(str);
                   },
@@ -63,65 +65,66 @@ class MyModalBottomSheet extends StatelessWidget {
                 Consumer(builder: (_, ref, __) {
                   final controller =
                       ref.watch(homeProvider.select((_) => _.currentImage));
-                  if(controller.currentImage == null){
+                  if (controller.currentImage == null) {
                     return MaterialButton(
                       color: AppColorsTheme.kPink,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(16.0),
                       ),
-                        onPressed: () {
-                          homeProvider.read.pickerImage(ImageSource.camera);
-                        },
-                        padding: EdgeInsets.zero,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Add photo  ',
+                      onPressed: () {
+                        homeProvider.read.pickerImage(ImageSource.camera);
+                      },
+                      padding: EdgeInsets.zero,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            '${texts.homeModalBottom.addPhoto}  ',
                             style: TextStyle(
                               color: AppColorsTheme.white,
-                              ),
                             ),
-                            Icon(Icons.add_a_photo_outlined, color: AppColorsTheme.white,),
-                          ],
-                        ),
-                      );
-                  }
-                  else
-                  {
+                          ),
+                          Icon(
+                            Icons.add_a_photo_outlined,
+                            color: AppColorsTheme.white,
+                          ),
+                        ],
+                      ),
+                    );
+                  } else {
                     return Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            MaterialButton(
-                              color: AppColorsTheme.kPink,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(16.0),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        MaterialButton(
+                          color: AppColorsTheme.kPink,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0),
+                          ),
+                          onPressed: () {
+                            homeProvider.read.pickerImage(ImageSource.camera);
+                          },
+                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                          child: Row(
+                            children: [
+                              Text(
+                                '${texts.homeModalBottom.editPhoto}  ',
+                                style: TextStyle(
+                                  color: AppColorsTheme.white,
+                                ),
                               ),
-                              onPressed: () {
-                                homeProvider.read
-                                    .pickerImage(ImageSource.camera);
-                              },
-                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                              child: Row(
-                                children:[
-                                  Text('Edit photo  ',
-                                  style: TextStyle(
-                                    color: AppColorsTheme.white,
-                                    ),
-                                  ),
-                                  Icon( 
-                                    Icons.add_a_photo_outlined, 
-                                    color: AppColorsTheme.white,
-                                  ),
-                                ],
+                              Icon(
+                                Icons.add_a_photo_outlined,
+                                color: AppColorsTheme.white,
                               ),
-                            ),
-                            CircleAvatar(
-                              backgroundImage: FileImage(controller.currentImage!),
-                            ),
-                            
-                          ],
-                        );
-                  }   
+                            ],
+                          ),
+                        ),
+                        CircleAvatar(
+                          backgroundImage: FileImage(controller.currentImage!),
+                        ),
+                      ],
+                    );
+                  }
                 }),
                 const SizedBox(
                   height: 8.0,
@@ -133,19 +136,21 @@ class MyModalBottomSheet extends StatelessWidget {
                   minWidth: double.infinity,
                   color: Theme.of(context).primaryColor,
                   child: Text(
-                    'Save expense',
+                    texts.homeModalBottom.saveExpense,
                     style: TextStyle(
                       color: AppColorsTheme.white,
                     ),
                   ),
-                  onPressed: () {
+                  onPressed: () async {
                     if (homeProvider.read.currentPrice != 0 ||
                         homeProvider.read.currentImage != null ||
                         homeProvider.read.formKey.currentState!.validate() ||
                         RegExp(r'^[a-zA-Z]*$').hasMatch(
                             homeProvider.read.currentPrice.toString())) {
-                      homeProvider.read.addExpense();
-                      Navigator.pop(context);
+                      ProgressDialog.show(context);
+                      await homeProvider.read.addExpense();
+                      router.pop();
+                      router.pop();
                     }
                   },
                 ),

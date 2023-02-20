@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 6
-/// Strings: 276 (46 per locale)
+/// Strings: 306 (51 per locale)
 ///
-/// Built on 2023-02-15 at 17:55 UTC
+/// Built on 2023-02-20 at 04:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -157,6 +157,7 @@ class _TranslationsEs implements BaseTranslations<AppLocale, _TranslationsEs> {
 	late final _TranslationsDrawerEs drawer = _TranslationsDrawerEs._(_root);
 	late final _TranslationsHomeDropDownButtonEs homeDropDownButton = _TranslationsHomeDropDownButtonEs._(_root);
 	late final _TranslationsLoginEs login = _TranslationsLoginEs._(_root);
+	late final _TranslationsHomeModalBottomEs homeModalBottom = _TranslationsHomeModalBottomEs._(_root);
 	late final _TranslationsHomeEs home = _TranslationsHomeEs._(_root);
 }
 
@@ -232,6 +233,20 @@ class _TranslationsLoginEs {
 	String get wrongPassword => 'Contraseña errónea';
 }
 
+// Path: homeModalBottom
+class _TranslationsHomeModalBottomEs {
+	_TranslationsHomeModalBottomEs._(this._root);
+
+	final _TranslationsEs _root; // ignore: unused_field
+
+	// Translations
+	String get addPhoto => 'Agregar foto';
+	String get editPhoto => 'Editar foto';
+	String get enterValidAmount => 'Ingrese un monto válido';
+	String get description => 'Descripción';
+	String get saveExpense => 'Guardar gasto';
+}
+
 // Path: home
 class _TranslationsHomeEs {
 	_TranslationsHomeEs._(this._root);
@@ -270,6 +285,7 @@ class _TranslationsEn implements _TranslationsEs {
 	@override late final _TranslationsDrawerEn drawer = _TranslationsDrawerEn._(_root);
 	@override late final _TranslationsHomeDropDownButtonEn homeDropDownButton = _TranslationsHomeDropDownButtonEn._(_root);
 	@override late final _TranslationsLoginEn login = _TranslationsLoginEn._(_root);
+	@override late final _TranslationsHomeModalBottomEn homeModalBottom = _TranslationsHomeModalBottomEn._(_root);
 	@override late final _TranslationsHomeEn home = _TranslationsHomeEn._(_root);
 }
 
@@ -345,6 +361,20 @@ class _TranslationsLoginEn implements _TranslationsLoginEs {
 	@override String get wrongPassword => 'Wrong password';
 }
 
+// Path: homeModalBottom
+class _TranslationsHomeModalBottomEn implements _TranslationsHomeModalBottomEs {
+	_TranslationsHomeModalBottomEn._(this._root);
+
+	@override final _TranslationsEn _root; // ignore: unused_field
+
+	// Translations
+	@override String get addPhoto => 'Add photo';
+	@override String get editPhoto => 'Edit photo';
+	@override String get enterValidAmount => 'Enter valid amount';
+	@override String get description => 'Description';
+	@override String get saveExpense => 'Save expense';
+}
+
 // Path: home
 class _TranslationsHomeEn implements _TranslationsHomeEs {
 	_TranslationsHomeEn._(this._root);
@@ -383,6 +413,7 @@ class _TranslationsEnBo implements _TranslationsEs {
 	@override late final _TranslationsDrawerEnBo drawer = _TranslationsDrawerEnBo._(_root);
 	@override late final _TranslationsHomeDropDownButtonEnBo homeDropDownButton = _TranslationsHomeDropDownButtonEnBo._(_root);
 	@override late final _TranslationsLoginEnBo login = _TranslationsLoginEnBo._(_root);
+	@override late final _TranslationsHomeModalBottomEnBo homeModalBottom = _TranslationsHomeModalBottomEnBo._(_root);
 	@override late final _TranslationsHomeEnBo home = _TranslationsHomeEnBo._(_root);
 }
 
@@ -458,6 +489,20 @@ class _TranslationsLoginEnBo implements _TranslationsLoginEs {
 	@override String get wrongPassword => 'Wrong password';
 }
 
+// Path: homeModalBottom
+class _TranslationsHomeModalBottomEnBo implements _TranslationsHomeModalBottomEs {
+	_TranslationsHomeModalBottomEnBo._(this._root);
+
+	@override final _TranslationsEnBo _root; // ignore: unused_field
+
+	// Translations
+	@override String get addPhoto => 'Add photo';
+	@override String get editPhoto => 'Edit photo';
+	@override String get enterValidAmount => 'Enter valid amount';
+	@override String get description => 'Description';
+	@override String get saveExpense => 'Save expense';
+}
+
 // Path: home
 class _TranslationsHomeEnBo implements _TranslationsHomeEs {
 	_TranslationsHomeEnBo._(this._root);
@@ -496,6 +541,7 @@ class _TranslationsEnUs implements _TranslationsEs {
 	@override late final _TranslationsDrawerEnUs drawer = _TranslationsDrawerEnUs._(_root);
 	@override late final _TranslationsHomeDropDownButtonEnUs homeDropDownButton = _TranslationsHomeDropDownButtonEnUs._(_root);
 	@override late final _TranslationsLoginEnUs login = _TranslationsLoginEnUs._(_root);
+	@override late final _TranslationsHomeModalBottomEnUs homeModalBottom = _TranslationsHomeModalBottomEnUs._(_root);
 	@override late final _TranslationsHomeEnUs home = _TranslationsHomeEnUs._(_root);
 }
 
@@ -571,6 +617,20 @@ class _TranslationsLoginEnUs implements _TranslationsLoginEs {
 	@override String get wrongPassword => 'Wrong password';
 }
 
+// Path: homeModalBottom
+class _TranslationsHomeModalBottomEnUs implements _TranslationsHomeModalBottomEs {
+	_TranslationsHomeModalBottomEnUs._(this._root);
+
+	@override final _TranslationsEnUs _root; // ignore: unused_field
+
+	// Translations
+	@override String get addPhoto => 'Add photo';
+	@override String get editPhoto => 'Edit photo';
+	@override String get enterValidAmount => 'Enter valid amount';
+	@override String get description => 'Description';
+	@override String get saveExpense => 'Save expense';
+}
+
 // Path: home
 class _TranslationsHomeEnUs implements _TranslationsHomeEs {
 	_TranslationsHomeEnUs._(this._root);
@@ -609,6 +669,7 @@ class _TranslationsEsBo implements _TranslationsEs {
 	@override late final _TranslationsDrawerEsBo drawer = _TranslationsDrawerEsBo._(_root);
 	@override late final _TranslationsHomeDropDownButtonEsBo homeDropDownButton = _TranslationsHomeDropDownButtonEsBo._(_root);
 	@override late final _TranslationsLoginEsBo login = _TranslationsLoginEsBo._(_root);
+	@override late final _TranslationsHomeModalBottomEsBo homeModalBottom = _TranslationsHomeModalBottomEsBo._(_root);
 	@override late final _TranslationsHomeEsBo home = _TranslationsHomeEsBo._(_root);
 }
 
@@ -684,6 +745,20 @@ class _TranslationsLoginEsBo implements _TranslationsLoginEs {
 	@override String get wrongPassword => 'Contraseña errónea';
 }
 
+// Path: homeModalBottom
+class _TranslationsHomeModalBottomEsBo implements _TranslationsHomeModalBottomEs {
+	_TranslationsHomeModalBottomEsBo._(this._root);
+
+	@override final _TranslationsEsBo _root; // ignore: unused_field
+
+	// Translations
+	@override String get addPhoto => 'Agregar foto';
+	@override String get editPhoto => 'Editar foto';
+	@override String get enterValidAmount => 'Ingrese un monto válido';
+	@override String get description => 'Descripción';
+	@override String get saveExpense => 'Guardar gasto';
+}
+
 // Path: home
 class _TranslationsHomeEsBo implements _TranslationsHomeEs {
 	_TranslationsHomeEsBo._(this._root);
@@ -722,6 +797,7 @@ class _TranslationsEsUs implements _TranslationsEs {
 	@override late final _TranslationsDrawerEsUs drawer = _TranslationsDrawerEsUs._(_root);
 	@override late final _TranslationsHomeDropDownButtonEsUs homeDropDownButton = _TranslationsHomeDropDownButtonEsUs._(_root);
 	@override late final _TranslationsLoginEsUs login = _TranslationsLoginEsUs._(_root);
+	@override late final _TranslationsHomeModalBottomEsUs homeModalBottom = _TranslationsHomeModalBottomEsUs._(_root);
 	@override late final _TranslationsHomeEsUs home = _TranslationsHomeEsUs._(_root);
 }
 
@@ -797,6 +873,20 @@ class _TranslationsLoginEsUs implements _TranslationsLoginEs {
 	@override String get wrongPassword => 'Contraseña errónea';
 }
 
+// Path: homeModalBottom
+class _TranslationsHomeModalBottomEsUs implements _TranslationsHomeModalBottomEs {
+	_TranslationsHomeModalBottomEsUs._(this._root);
+
+	@override final _TranslationsEsUs _root; // ignore: unused_field
+
+	// Translations
+	@override String get addPhoto => 'Agregar foto';
+	@override String get editPhoto => 'Editar foto';
+	@override String get enterValidAmount => 'Ingrese un monto válido';
+	@override String get description => 'Descripción';
+	@override String get saveExpense => 'Guardar gasto';
+}
+
 // Path: home
 class _TranslationsHomeEsUs implements _TranslationsHomeEs {
 	_TranslationsHomeEsUs._(this._root);
@@ -858,6 +948,11 @@ extension on _TranslationsEs {
 			case 'login.verificationPassword': return 'Repetir contraseña';
 			case 'login.weakPassword': return 'Contraseña muy débil';
 			case 'login.wrongPassword': return 'Contraseña errónea';
+			case 'homeModalBottom.addPhoto': return 'Agregar foto';
+			case 'homeModalBottom.editPhoto': return 'Editar foto';
+			case 'homeModalBottom.enterValidAmount': return 'Ingrese un monto válido';
+			case 'homeModalBottom.description': return 'Descripción';
+			case 'homeModalBottom.saveExpense': return 'Guardar gasto';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}
@@ -912,6 +1007,11 @@ extension on _TranslationsEn {
 			case 'login.verificationPassword': return 'Verification password';
 			case 'login.weakPassword': return 'Weak password';
 			case 'login.wrongPassword': return 'Wrong password';
+			case 'homeModalBottom.addPhoto': return 'Add photo';
+			case 'homeModalBottom.editPhoto': return 'Edit photo';
+			case 'homeModalBottom.enterValidAmount': return 'Enter valid amount';
+			case 'homeModalBottom.description': return 'Description';
+			case 'homeModalBottom.saveExpense': return 'Save expense';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
@@ -966,6 +1066,11 @@ extension on _TranslationsEnBo {
 			case 'login.verificationPassword': return 'Verification password';
 			case 'login.weakPassword': return 'Weak password';
 			case 'login.wrongPassword': return 'Wrong password';
+			case 'homeModalBottom.addPhoto': return 'Add photo';
+			case 'homeModalBottom.editPhoto': return 'Edit photo';
+			case 'homeModalBottom.enterValidAmount': return 'Enter valid amount';
+			case 'homeModalBottom.description': return 'Description';
+			case 'homeModalBottom.saveExpense': return 'Save expense';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
@@ -1020,6 +1125,11 @@ extension on _TranslationsEnUs {
 			case 'login.verificationPassword': return 'Verification password';
 			case 'login.weakPassword': return 'Weak password';
 			case 'login.wrongPassword': return 'Wrong password';
+			case 'homeModalBottom.addPhoto': return 'Add photo';
+			case 'homeModalBottom.editPhoto': return 'Edit photo';
+			case 'homeModalBottom.enterValidAmount': return 'Enter valid amount';
+			case 'homeModalBottom.description': return 'Description';
+			case 'homeModalBottom.saveExpense': return 'Save expense';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
 		}
@@ -1074,6 +1184,11 @@ extension on _TranslationsEsBo {
 			case 'login.verificationPassword': return 'Repetir contraseña';
 			case 'login.weakPassword': return 'Contraseña muy débil';
 			case 'login.wrongPassword': return 'Contraseña errónea';
+			case 'homeModalBottom.addPhoto': return 'Agregar foto';
+			case 'homeModalBottom.editPhoto': return 'Editar foto';
+			case 'homeModalBottom.enterValidAmount': return 'Ingrese un monto válido';
+			case 'homeModalBottom.description': return 'Descripción';
+			case 'homeModalBottom.saveExpense': return 'Guardar gasto';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}
@@ -1128,6 +1243,11 @@ extension on _TranslationsEsUs {
 			case 'login.verificationPassword': return 'Repetir contraseña';
 			case 'login.weakPassword': return 'Contraseña muy débil';
 			case 'login.wrongPassword': return 'Contraseña errónea';
+			case 'homeModalBottom.addPhoto': return 'Agregar foto';
+			case 'homeModalBottom.editPhoto': return 'Editar foto';
+			case 'homeModalBottom.enterValidAmount': return 'Ingrese un monto válido';
+			case 'homeModalBottom.description': return 'Descripción';
+			case 'homeModalBottom.saveExpense': return 'Guardar gasto';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
 		}

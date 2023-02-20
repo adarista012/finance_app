@@ -1,7 +1,10 @@
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:finance_app/app/domain/models/expense.dart';
+import 'package:finance_app/app/domain/repositories/expenses_from_firebase_repository.dart';
+import 'package:finance_app/app/domain/repositories/picker_image_repository.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_dismissble.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +24,8 @@ class HomeController extends SimpleNotifier {
     getFirebaseExpenses();
   }
 
-  final CollectionReference _expenses =
-      FirebaseFirestore.instance.collection('expenses');
+  // final CollectionReference _expenses =
+  //     FirebaseFirestore.instance.collection('expenses');
   double _totalAmount = 0;
   double get totalAmmount => _totalAmount;
   // List<Expense> _list = [];
@@ -35,13 +38,13 @@ class HomeController extends SimpleNotifier {
 
   double _currentPrice = 0;
   double get currentPrice => _currentPrice;
-  String _currentDetail = 'empty';
+  String _currentDetail = AppConstants.empty;
   String get currentDetail => _currentDetail;
 
-  String _currentImageUrl = 'empty';
+  String _currentImageUrl = AppConstants.empty;
   String get currentImageUrl => _currentImageUrl;
 
-  String _currentImagePath = 'empty';
+  String _currentImagePath = AppConstants.empty;
   String get currentImagePath => _currentImagePath;
 
   File? _currentImage;
@@ -49,6 +52,9 @@ class HomeController extends SimpleNotifier {
 
   bool _isLoading = false;
   bool get isLoading => _isLoading;
+
+  final _imagePicker = Get.find<PickerImageRepository>();
+  final _firebase = Get.find<ExpensesFromFirebaseRepository>();
 
   // bool _isUpload = false;
   // bool get isUpload => _isUpload;
@@ -71,14 +77,11 @@ class HomeController extends SimpleNotifier {
 
   void setCurrentImage(File? currentImage) {
     _currentImage = currentImage;
-    // notify();
+    notify();
   }
 
-  Future pickerImage(ImageSource source) async {
-    final ImagePicker picker = ImagePicker();
-    final image = await picker.pickImage(source: source);
-    if (image == null) return;
-    File? img = File(image.path);
+  Future<void> pickerImage(ImageSource source) async {
+    final img = await _imagePicker.pickerImage(source);
     setCurrentImage(img);
     notify();
   }
@@ -94,37 +97,22 @@ class HomeController extends SimpleNotifier {
   }
 
   Future<void> uploadImageToFirebaseStorage(String hash) async {
-    final storageRef = FirebaseStorage.instance.ref().child('images/$hash.jpg');
-
-    await storageRef.putFile(_currentImage!).then((snapshot) async {
-      setCurrentImagePath(snapshot.ref.fullPath);
-      await getUrl(hash);
-    }).catchError((error) {});
+    await _firebase.uploadImageToFirebaseStorage(
+        hash: hash, currentImage: _currentImage);
   }
 
   Future<void> getUrl(String hash) async {
-    final storageRef = FirebaseStorage.instance.ref().child('images/$hash.jpg');
-    await storageRef.getDownloadURL().then(
-      (url) {
-        setCurrentImageUrl(url);
-      },
-    ).catchError((error) {});
+    await _firebase.getUrl(hash);
   }
 
   Future<void> uploadExpenseToFirebaseFirestore() async {
-    _expenses.add({
-      'price': _currentPrice,
-      'detail': _currentDetail,
-      'date': DateTime.now(),
-      'imageUrl': _currentImageUrl,
-      'imagePath': _currentImagePath
-    }).then((value) {
-      setCurrentPrice(0);
-      setCurrentDetail('empty');
-      setCurrentImageUrl('empty');
-      setCurrentImagePath('empty');
-      setCurrentImage(null);
-    }).catchError((error) {});
+    await _firebase.uploadExpenseToFirebaseFirestore(
+      currentPrice: _currentPrice,
+      currentDetail: _currentDetail,
+      dateTime: DateTime.now(),
+      currentImageUrl: _currentImageUrl,
+      currentImagePath: _currentImagePath,
+    );
   }
 
   Future<void> deleteImagetoFirebaseStorage(String hash) async {
@@ -133,37 +121,24 @@ class HomeController extends SimpleNotifier {
     await desertRef.delete();
   }
 
-  void addExpense() async {
+  Future<void> addExpense() async {
     if (_currentImage != null) {
       await uploadImageToFirebaseStorage(_currentImage!.hashCode.toString());
       await uploadExpenseToFirebaseFirestore();
     } else {
       await uploadExpenseToFirebaseFirestore();
     }
-
-    // notify();
   }
 
   Future<void> removeExpense(Expense expense) async {
-    CollectionReference expenses =
-        FirebaseFirestore.instance.collection('expenses');
-    expenses.doc(expense.id).delete().then((value) async {
-      if (expense.picturePath != 'empty') {
-        final storageRef = FirebaseStorage.instance.ref();
-        final desertRef = storageRef.child(expense.picturePath!);
-        await desertRef.delete();
-      }
-    }).catchError((error) {});
+    _firebase.removeExpense(expense);
     notify();
   }
 
   Future<void> getFirebaseExpenses() async {
     _isLoading = true;
-    // _list.clear();
-    final Stream<QuerySnapshot> expensesStream = FirebaseFirestore.instance
-        .collection('expenses')
-        .orderBy('date', descending: true)
-        .snapshots();
+    final Stream<QuerySnapshot> expensesStream =
+        _firebase.getFirebaseExpenses();
     expensesStream.forEach(
       (event) {
         _listDismissibles = event.docs.map(
@@ -188,3 +163,43 @@ class HomeController extends SimpleNotifier {
     );
   }
 }
+
+// final ww = StreamBuilder(
+//     stream: FirebaseFirestore.instance
+//         .collection('expenses')
+//         .orderBy('date', descending: true)
+//         .snapshots(),
+//     builder: (_, __) {
+//       print(__.connectionState);
+//       if (__.connectionState == ConnectionState.waiting) {
+//         return const CircularProgressIndicator();
+//       }
+
+//       ;
+//       if (__.hasError) {
+//         return Text(__.error.toString());
+//       }
+//       if (__.hasData) {
+//         if (__.data != null) {
+//           List<MyDismissible> list = __.data!.docs.map(((e) {
+//             return MyDismissible(
+//               expense: Expense(
+//                 price: e.get('price'),
+//                 detail: e.get('detail'),
+//                 category: null,
+//                 date: (e.get('date') as Timestamp).toDate(),
+//                 pictureUrl: null,
+//                 picturePath: e.get('imagePath'),
+//                 id: e.id,
+//               ),
+//             );
+//           })).toList();
+
+//           return ListView(
+//             children: list,
+//           );
+//         }
+//         return Text('null');
+//       }
+//       return const CircularProgressIndicator();
+//     });

@@ -31,17 +31,18 @@ class HomePage extends StatelessWidget {
                   child: MyHeader(),
                 ),
                 Flexible(
-                    flex: 4,
-                    child: controller.isLoading == true
-                        ? const Center(
-                            child: CircularProgressIndicator(),
-                          )
-                        : RefreshIndicator(
-                            onRefresh: controller.getFirebaseExpenses,
-                            child: ListView(
-                              children: controller.listDismissibles,
-                            ),
-                          )),
+                  flex: 4,
+                  child: controller.isLoading == true
+                      ? const Center(
+                          child: CircularProgressIndicator(),
+                        )
+                      : RefreshIndicator(
+                          onRefresh: controller.getFirebaseExpenses,
+                          child: ListView(
+                            children: controller.listDismissibles,
+                          ),
+                        ),
+                ),
               ],
             );
           },

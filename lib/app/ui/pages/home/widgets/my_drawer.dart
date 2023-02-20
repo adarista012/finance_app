@@ -21,7 +21,7 @@ class MyDrawer extends StatelessWidget {
       child: Column(
         children: [
           Flexible(
-            flex: 2,
+            flex: 3,
             child: Container(
               alignment: Alignment.bottomCenter,
               color: AppColorsTheme.kPink,
@@ -40,7 +40,9 @@ class MyDrawer extends StatelessWidget {
                               backgroundImage: NetworkImage(user!.photoURL!),
                               child: user.photoURL == null
                                   ? Text(
-                                      user.displayName != null
+                                      user.displayName != null &&
+                                              user.displayName !=
+                                                  AppConstants.empty
                                           ? user.displayName![0].toUpperCase()
                                           : user.email != null
                                               ? user.email![0].toUpperCase()
@@ -56,7 +58,9 @@ class MyDrawer extends StatelessWidget {
                               radius: 56,
                               child: user!.photoURL == null
                                   ? Text(
-                                      user.displayName != null
+                                      user.displayName != null &&
+                                              user.displayName !=
+                                                  AppConstants.empty
                                           ? user.displayName![0].toUpperCase()
                                           : user.email != null
                                               ? user.email![0].toUpperCase()
@@ -72,7 +76,10 @@ class MyDrawer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            user.displayName ?? AppConstants.nickName,
+                            user.displayName != AppConstants.empty &&
+                                    user.displayName != null
+                                ? user.displayName!
+                                : AppConstants.nickName,
                             style: TextStyle(
                               color: AppColorsTheme.white,
                               fontWeight: FontWeight.bold,
@@ -113,7 +120,7 @@ class MyDrawer extends StatelessWidget {
             ),
           ),
           Flexible(
-            flex: 5,
+            flex: 7,
             child: Column(
               children: [
                 Container(

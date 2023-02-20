@@ -41,7 +41,11 @@ class LanguageController extends SimpleNotifier {
     } else {
       defaultLocale = preferences.getString(AppConstants.preferencesKeyLocal)!;
     }
-    switch (Intl.defaultLocale) {
+    return defaultLocale;
+  }
+
+  void setLocale(String code) {
+    switch (code) {
       case AppConstants.en:
         LocaleSettings.setLocale(AppLocale.en);
         break;
@@ -61,7 +65,6 @@ class LanguageController extends SimpleNotifier {
         LocaleSettings.setLocale(AppLocale.esUs);
         break;
     }
-    return defaultLocale;
   }
 }
 

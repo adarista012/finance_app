@@ -13,11 +13,14 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   LocaleSettings.useDeviceLocale();
   await Firebase.initializeApp(
-    name: 'antonio',
+    name: 'costometro',
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
   Intl.defaultLocale = await languageProvider.read.getIntlDefaultLocale();
+  languageProvider.read.setLocale(
+    Intl.defaultLocale.toString(),
+  );
 
   numberFormatSymbols['es_BO'] = const NumberSymbols(
     NAME: "es_BO",

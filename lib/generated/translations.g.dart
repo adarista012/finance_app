@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 6
-/// Strings: 306 (51 per locale)
+/// Strings: 312 (52 per locale)
 ///
-/// Built on 2023-02-20 at 04:09 UTC
+/// Built on 2023-02-21 at 06:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -244,6 +244,7 @@ class _TranslationsHomeModalBottomEs {
 	String get editPhoto => 'Editar foto';
 	String get enterValidAmount => 'Ingrese un monto válido';
 	String get description => 'Descripción';
+	String get price => 'Precio';
 	String get saveExpense => 'Guardar gasto';
 }
 
@@ -372,6 +373,7 @@ class _TranslationsHomeModalBottomEn implements _TranslationsHomeModalBottomEs {
 	@override String get editPhoto => 'Edit photo';
 	@override String get enterValidAmount => 'Enter valid amount';
 	@override String get description => 'Description';
+	@override String get price => 'Price';
 	@override String get saveExpense => 'Save expense';
 }
 
@@ -500,6 +502,7 @@ class _TranslationsHomeModalBottomEnBo implements _TranslationsHomeModalBottomEs
 	@override String get editPhoto => 'Edit photo';
 	@override String get enterValidAmount => 'Enter valid amount';
 	@override String get description => 'Description';
+	@override String get price => 'Price';
 	@override String get saveExpense => 'Save expense';
 }
 
@@ -628,6 +631,7 @@ class _TranslationsHomeModalBottomEnUs implements _TranslationsHomeModalBottomEs
 	@override String get editPhoto => 'Edit photo';
 	@override String get enterValidAmount => 'Enter valid amount';
 	@override String get description => 'Description';
+	@override String get price => 'Price';
 	@override String get saveExpense => 'Save expense';
 }
 
@@ -756,6 +760,7 @@ class _TranslationsHomeModalBottomEsBo implements _TranslationsHomeModalBottomEs
 	@override String get editPhoto => 'Editar foto';
 	@override String get enterValidAmount => 'Ingrese un monto válido';
 	@override String get description => 'Descripción';
+	@override String get price => 'Precio';
 	@override String get saveExpense => 'Guardar gasto';
 }
 
@@ -884,6 +889,7 @@ class _TranslationsHomeModalBottomEsUs implements _TranslationsHomeModalBottomEs
 	@override String get editPhoto => 'Editar foto';
 	@override String get enterValidAmount => 'Ingrese un monto válido';
 	@override String get description => 'Descripción';
+	@override String get price => 'Precio';
 	@override String get saveExpense => 'Guardar gasto';
 }
 
@@ -952,6 +958,7 @@ extension on _TranslationsEs {
 			case 'homeModalBottom.editPhoto': return 'Editar foto';
 			case 'homeModalBottom.enterValidAmount': return 'Ingrese un monto válido';
 			case 'homeModalBottom.description': return 'Descripción';
+			case 'homeModalBottom.price': return 'Precio';
 			case 'homeModalBottom.saveExpense': return 'Guardar gasto';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
@@ -1011,6 +1018,7 @@ extension on _TranslationsEn {
 			case 'homeModalBottom.editPhoto': return 'Edit photo';
 			case 'homeModalBottom.enterValidAmount': return 'Enter valid amount';
 			case 'homeModalBottom.description': return 'Description';
+			case 'homeModalBottom.price': return 'Price';
 			case 'homeModalBottom.saveExpense': return 'Save expense';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
@@ -1070,6 +1078,7 @@ extension on _TranslationsEnBo {
 			case 'homeModalBottom.editPhoto': return 'Edit photo';
 			case 'homeModalBottom.enterValidAmount': return 'Enter valid amount';
 			case 'homeModalBottom.description': return 'Description';
+			case 'homeModalBottom.price': return 'Price';
 			case 'homeModalBottom.saveExpense': return 'Save expense';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
@@ -1129,6 +1138,7 @@ extension on _TranslationsEnUs {
 			case 'homeModalBottom.editPhoto': return 'Edit photo';
 			case 'homeModalBottom.enterValidAmount': return 'Enter valid amount';
 			case 'homeModalBottom.description': return 'Description';
+			case 'homeModalBottom.price': return 'Price';
 			case 'homeModalBottom.saveExpense': return 'Save expense';
 			case 'home.total': return ({required Object month}) => 'Total of ${month} ';
 			default: return null;
@@ -1188,6 +1198,7 @@ extension on _TranslationsEsBo {
 			case 'homeModalBottom.editPhoto': return 'Editar foto';
 			case 'homeModalBottom.enterValidAmount': return 'Ingrese un monto válido';
 			case 'homeModalBottom.description': return 'Descripción';
+			case 'homeModalBottom.price': return 'Precio';
 			case 'homeModalBottom.saveExpense': return 'Guardar gasto';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;
@@ -1247,6 +1258,7 @@ extension on _TranslationsEsUs {
 			case 'homeModalBottom.editPhoto': return 'Editar foto';
 			case 'homeModalBottom.enterValidAmount': return 'Ingrese un monto válido';
 			case 'homeModalBottom.description': return 'Descripción';
+			case 'homeModalBottom.price': return 'Precio';
 			case 'homeModalBottom.saveExpense': return 'Guardar gasto';
 			case 'home.total': return ({required Object month}) => 'Total en ${month} ';
 			default: return null;

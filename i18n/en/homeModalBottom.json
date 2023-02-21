@@ -3,5 +3,6 @@
     "editPhoto": "Edit photo",
     "enterValidAmount": "Enter valid amount",
     "description": "Description",
+    "price" : "Price",
     "saveExpense": "Save expense"
 }

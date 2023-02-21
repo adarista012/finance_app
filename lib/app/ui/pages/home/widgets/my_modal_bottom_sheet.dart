@@ -23,8 +23,6 @@ class MyModalBottomSheet extends StatelessWidget {
           child: Form(
             key: homeProvider.read.formKey,
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.end,
-              // crossAxisAlignment: CrossAxisAlignment.end,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 const SizedBox(
@@ -33,7 +31,8 @@ class MyModalBottomSheet extends StatelessWidget {
                 TextFormField(
                   keyboardType:
                       const TextInputType.numberWithOptions(decimal: true),
-                  decoration: const InputDecoration(hintText: 'Price'),
+                  decoration:
+                      InputDecoration(hintText: texts.homeModalBottom.price),
                   validator: (value) {
                     if (value != null ||
                         value!.isEmpty ||

@@ -11,23 +11,25 @@ import 'package:finance_app/generated/translations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 
-class MyDrawer extends StatelessWidget {
-  const MyDrawer({super.key});
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      backgroundColor: Colors.grey.shade100,
-      child: Column(
-        children: [
-          Flexible(
-            flex: 3,
-            child: Container(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Settings'),
+        elevation: 0.0,
+      ),
+      body: Container(
+        color: Colors.grey.shade100,
+        child: ListView(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height / 4,
+              width: MediaQuery.of(context).size.width,
               alignment: Alignment.bottomCenter,
               color: AppColorsTheme.kPink,
-              height: double.infinity,
-              width: double.infinity,
-              padding: const EdgeInsets.all(8.0),
               child: Consumer(
                 builder: (_, watch, __) {
                   final user = watch.watch(sessionProvider).user;
@@ -118,57 +120,95 @@ class MyDrawer extends StatelessWidget {
                 },
               ),
             ),
-          ),
-          Flexible(
-            flex: 7,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(8.0),
-                    alignment: Alignment.centerLeft,
-                    child: Row(
-                      children: [
-                        Text(
-                          '${texts.drawer.languageAndRegion} ',
-                        ),
-                        Icon(
-                          Icons.language,
-                          color: Colors.grey.shade800,
-                        ),
-                      ],
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 8.0,
+                left: 8.0,
+                right: 8.0,
+              ),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8.0,
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      '${texts.drawer.languageAndRegion} ',
                     ),
-                  ),
-                  Container(
-                    color: AppColorsTheme.white,
-                    width: double.infinity,
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: const MyDropDownButton(),
-                  ),
-                  Expanded(child: Container()),
-                  Container(
-                    color: AppColorsTheme.white,
-                    margin: const EdgeInsets.symmetric(vertical: 32.0),
-                    width: double.infinity,
-                    child: TextButton(
-                      onPressed: () async {
-                        ProgressDialog.show(context);
-                        await sessionProvider.read.signOut();
-                      },
-                      child: Text(
-                        texts.login.logOut,
-                        style: TextStyle(
-                          color: AppColorsTheme.red,
-                        ),
-                      ),
+                    Icon(
+                      Icons.language,
+                      color: Colors.grey.shade800,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: AppColorsTheme.white,
+                width: double.infinity,
+                padding: const EdgeInsets.only(left: 8.0),
+                child: const MyDropDownButton(),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 8.0,
+              ),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8.0,
+                ),
+                child: Row(
+                  children: [
+                    const Text(
+                      'email verified ',
+                    ),
+                    Icon(
+                      Icons.verified_user,
+                      color: Colors.grey.shade800,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 45,
+                alignment: Alignment.centerLeft,
+                color: AppColorsTheme.white,
+                width: double.infinity,
+                padding: const EdgeInsets.all(8.0),
+                child:
+                    Text(sessionProvider.read.user!.emailVerified.toString()),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                color: AppColorsTheme.white,
+                margin: const EdgeInsets.symmetric(vertical: 32.0),
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () async {
+                    ProgressDialog.show(context);
+                    await sessionProvider.read.signOut();
+                  },
+                  child: Text(
+                    texts.login.logOut,
+                    style: TextStyle(
+                      color: AppColorsTheme.red,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

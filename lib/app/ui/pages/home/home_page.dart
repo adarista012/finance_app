@@ -2,6 +2,9 @@ import 'package:finance_app/app/ui/pages/home/widgets/my_drawer.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_floating_action_button.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_header.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_total_card.dart';
+import 'package:finance_app/app/ui/global_widgets/tween_animation_name.dart';
+import 'package:finance_app/app/ui/routes/routes.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_meedu/ui.dart';
 import 'controller/home_provider.dart';
@@ -16,6 +19,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings_sharp),
+            onPressed: () {
+              router.pushNamed(Routes.SETTINGS,
+                  transition: Transition.rightToLeft);
+            },
+          ),
+        ],
       ),
       drawer: const MyDrawer(),
       body: SizedBox(
@@ -43,7 +55,7 @@ class HomePage extends StatelessWidget {
                               onRefresh: controller.getFirebaseExpenses,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  top: 34.0,
+                                  top: 44.0,
                                 ),
                                 child: ListView(
                                   children: controller.listDismissibles,
@@ -52,6 +64,14 @@ class HomePage extends StatelessWidget {
                             ),
                     ),
                   ],
+                ),
+                TweenAnimationName(
+                  text: AppConstants.nameOfApp.substring(0, 5),
+                  isLeft: true,
+                ),
+                TweenAnimationName(
+                  text: AppConstants.nameOfApp.substring(5),
+                  isLeft: false,
                 ),
                 MyTotalCard(
                   amount: controller.amount(),

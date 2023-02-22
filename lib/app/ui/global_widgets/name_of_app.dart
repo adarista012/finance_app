@@ -12,8 +12,9 @@ class NameOfApp extends StatelessWidget {
       AppConstants.nameOfApp,
       style: GoogleFonts.ubuntu(
         color: AppColorsTheme.kPink,
-        fontSize: 48,
-        fontWeight: FontWeight.bold,
+        fontSize: 36,
+        fontWeight: FontWeight.w900,
+        letterSpacing: 12,
         shadows: [
           Shadow(
             color: AppColorsTheme.grey,

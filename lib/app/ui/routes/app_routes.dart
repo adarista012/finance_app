@@ -1,3 +1,5 @@
+import 'package:finance_app/app/ui/pages/settings/settings_page.dart';
+
 import '../pages/reset_password/reset_password_page.dart';
 import '../pages/register/register_page.dart';
 import '../pages/login/login_page.dart';
@@ -16,5 +18,6 @@ Map<String, Widget Function(BuildContext)> get appRoutes {
     Routes.LOGIN: (_) => const LoginPage(),
     Routes.REGISTER: (_) => const RegisterPage(),
     Routes.RESET_PASSWORD: (_) => const ResetPasswordPage(),
+    Routes.SETTINGS: (_) => const SettingsPage(),
   };
 }

@@ -15,11 +15,11 @@ class LoginController extends SimpleNotifier {
   final _authRepository = Get.find<AuthenticationRepository>();
 
   void onEmailChanged(String text) {
-    _email = text;
+    _email = text.trim();
   }
 
   void onPasswordChanged(String text) {
-    _password = text;
+    _password = text.trim();
   }
 
   Future<SignInResponse> signInWithEmailAndPassword() async {

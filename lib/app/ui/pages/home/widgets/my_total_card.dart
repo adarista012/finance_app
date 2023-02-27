@@ -13,6 +13,7 @@ class MyTotalCard extends StatelessWidget {
       top: MediaQuery.of(context).size.height / 8 - 16,
       left: 16.0,
       child: MaterialButton(
+        elevation: 4,
         onPressed: () {},
         color: AppColorsTheme.white,
         height: 100,
@@ -25,17 +26,6 @@ class MyTotalCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Text(
-            //   texts.home.total(
-            //     month: DateFormat('MMMM').format(
-            //       DateTime.now(),
-            //     ),
-            //   ),
-            //   style: GoogleFonts.ubuntu(
-            //     color: AppColorsTheme.kPink,
-            //     fontSize: 24.0,
-            //   ),
-            // ),
             Text(
               DateFormat('MMMM')
                   .format(

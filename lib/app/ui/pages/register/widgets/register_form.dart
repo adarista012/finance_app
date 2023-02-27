@@ -1,5 +1,6 @@
 import 'package:finance_app/app/ui/global_widgets/custom_input_flied.dart';
 import 'package:finance_app/app/ui/global_widgets/social_icon_button.dart';
+import 'package:finance_app/app/ui/pages/login/utils/log_in_with_facebook.dart';
 import 'package:finance_app/app/ui/pages/login/utils/log_in_with_google.dart';
 import 'package:finance_app/app/ui/pages/register/controller/register_controller.dart';
 import 'package:finance_app/app/ui/pages/register/controller/register_provider.dart';
@@ -98,7 +99,7 @@ class RegisterForm extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SocialIconButton(
-                  onPressed: () {},
+                  onPressed: () => logInWithFacebook(context),
                   color: Colors.blueAccent,
                   icon: Icon(
                     SocialIcons.facebook,

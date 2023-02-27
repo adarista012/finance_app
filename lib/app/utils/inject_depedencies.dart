@@ -8,6 +8,7 @@ import 'package:finance_app/app/domain/repositories/expenses_from_firebase_repos
 import 'package:finance_app/app/domain/repositories/picker_image_repository.dart';
 import 'package:finance_app/app/domain/repositories/sign_up_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:flutter_meedu/meedu.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import '../domain/repositories/authentication_repository.dart';
@@ -17,6 +18,7 @@ Future<void> injectDependencies() async {
     () => AuthenticationRepositoryImpl(
       firebaseAuth: FirebaseAuth.instance,
       googleSignIn: GoogleSignIn(),
+      facebookAuth: FacebookAuth.i,
     ),
   );
 

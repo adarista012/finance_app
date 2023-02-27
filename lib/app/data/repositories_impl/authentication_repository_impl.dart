@@ -3,18 +3,23 @@ import 'package:finance_app/app/domain/repositories/authentication_repository.da
 import 'package:finance_app/app/domain/response/reset_password_response.dart';
 import 'package:finance_app/app/domain/response/sign_in_response.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthenticationRepositoryImpl extends AuthenticationRepository {
   final FirebaseAuth _auth;
   final GoogleSignIn _googleSignIn;
+  final FacebookAuth _facebookAuth;
   User? _user;
 
   final Completer<void> _completer = Completer();
   AuthenticationRepositoryImpl(
-      {required FirebaseAuth firebaseAuth, required GoogleSignIn googleSignIn})
+      {required FirebaseAuth firebaseAuth,
+      required GoogleSignIn googleSignIn,
+      required FacebookAuth facebookAuth})
       : _auth = firebaseAuth,
-        _googleSignIn = googleSignIn {
+        _googleSignIn = googleSignIn,
+        _facebookAuth = facebookAuth {
     _init();
   }
 
@@ -51,7 +56,9 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
     }
     if (providerId == 'google.com') {
       await _googleSignIn.signOut();
-    } else if (providerId == 'facebook.com') {}
+    } else if (providerId == 'facebook.com') {
+      await _facebookAuth.logOut();
+    }
     return _auth.signOut();
   }
 
@@ -64,7 +71,13 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
         password: password,
       );
       final user = userCredential.user;
-      return SignInResponse(null, user);
+      if (!user!.emailVerified) {
+        await user.sendEmailVerification();
+      }
+      return SignInResponse(
+        null,
+        user,
+      );
     } on FirebaseAuthException catch (e) {
       return SignInResponse(
         stringToSignInError(e.code),
@@ -84,7 +97,7 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
   }
 
   @override
-  Future<SignInResponse> signInWithGoogle() async {
+  Future<SignInResponse> logInWithGoogle() async {
     try {
       final account = await _googleSignIn.signIn();
       if (account == null) {
@@ -104,6 +117,43 @@ class AuthenticationRepositoryImpl extends AuthenticationRepository {
       return SignInResponse(
         null,
         userCredential.user,
+      );
+    } on FirebaseAuthException catch (e) {
+      return SignInResponse(
+        stringToSignInError(e.code),
+        null,
+      );
+    }
+  }
+
+  @override
+  Future<SignInResponse> logInWithFacebook() async {
+    try {
+      final result = await _facebookAuth.login();
+
+      if (result.status == LoginStatus.success) {
+        final oAuthCredential =
+            FacebookAuthProvider.credential(result.accessToken!.token);
+        final userCredential = await _auth.signInWithCredential(
+          oAuthCredential,
+        );
+        final user = userCredential.user;
+        if (!user!.emailVerified && user.email != null) {
+          user.sendEmailVerification();
+        }
+        return SignInResponse(
+          null,
+          user,
+        );
+      } else if (result.status == LoginStatus.cancelled) {
+        return SignInResponse(
+          SignInError.cancelled,
+          null,
+        );
+      }
+      return SignInResponse(
+        SignInError.unknown,
+        null,
       );
     } on FirebaseAuthException catch (e) {
       return SignInResponse(

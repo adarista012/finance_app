@@ -1,4 +1,5 @@
 import 'package:finance_app/app/ui/pages/login/controller/login_controller.dart';
+import 'package:finance_app/app/ui/pages/login/utils/log_in_with_facebook.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -95,7 +96,7 @@ class LoginForm extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SocialIconButton(
-                  onPressed: () {},
+                  onPressed: () => logInWithFacebook(context),
                   color: Colors.blueAccent,
                   icon: Icon(
                     SocialIcons.facebook,

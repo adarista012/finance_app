@@ -177,14 +177,64 @@ class SettingsPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                elevation: 0.0,
+                onPressed: sessionProvider.read.user!.emailVerified != false
+                    ? null
+                    : () {
+                        Dialogs.alert(
+                          context,
+                          title: 'Send email verification?',
+                          content: 'login again to verify',
+                          okText: 'send',
+                        );
+
+                        sessionProvider.read.user!.sendEmailVerification();
+                      },
+                height: 45,
+                // alignment: Alignment.centerLeft,
+                color: AppColorsTheme.white,
+                minWidth: double.infinity,
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                        sessionProvider.read.user!.emailVerified.toString())),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 8.0,
+              ),
+              child: Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 8.0,
+                ),
+                child: Row(
+                  children: [
+                    const Text(
+                      'email ',
+                    ),
+                    Icon(
+                      Icons.alternate_email,
+                      color: Colors.grey.shade800,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Container(
                 height: 45,
                 alignment: Alignment.centerLeft,
                 color: AppColorsTheme.white,
                 width: double.infinity,
                 padding: const EdgeInsets.all(8.0),
-                child:
-                    Text(sessionProvider.read.user!.emailVerified.toString()),
+                child: Text(
+                  sessionProvider.read.user!.email ?? '',
+                ),
               ),
             ),
             Padding(

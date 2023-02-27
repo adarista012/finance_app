@@ -51,12 +51,12 @@ class HomePage extends StatelessWidget {
                           ? const Center(
                               child: CircularProgressIndicator(),
                             )
-                          : RefreshIndicator(
-                              onRefresh: controller.getFirebaseExpenses,
-                              child: Padding(
-                                padding: const EdgeInsets.only(
-                                  top: 44.0,
-                                ),
+                          : Padding(
+                              padding: const EdgeInsets.only(
+                                top: 44.0,
+                              ),
+                              child: RefreshIndicator(
+                                onRefresh: controller.getFirebaseExpenses,
                                 child: ListView(
                                   children: controller.listDismissibles,
                                 ),

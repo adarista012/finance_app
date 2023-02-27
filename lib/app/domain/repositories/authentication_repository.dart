@@ -10,7 +10,9 @@ abstract class AuthenticationRepository {
     String email,
     String password,
   );
-  Future<SignInResponse> signInWithGoogle();
+  Future<SignInResponse> logInWithGoogle();
+
+  Future<SignInResponse> logInWithFacebook();
 
   Future<ResetPasswordResponse> sendResetPasswordLink(String email);
 }

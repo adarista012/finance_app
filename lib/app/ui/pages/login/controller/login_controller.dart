@@ -36,7 +36,16 @@ class LoginController extends SimpleNotifier {
   }
 
   Future<SignInResponse> signInWithGoogle() async {
-    final response = await _authRepository.signInWithGoogle();
+    final response = await _authRepository.logInWithGoogle();
+    if (response.error == null) {
+      _sessionController.setUser(response.user!);
+    }
+
+    return response;
+  }
+
+  Future<SignInResponse> signInWithFacebook() async {
+    final response = await _authRepository.logInWithFacebook();
     if (response.error == null) {
       _sessionController.setUser(response.user!);
     }

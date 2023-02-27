@@ -9,13 +9,19 @@ class SingUpRepositoryImpl implements SingUpRepository {
   @override
   Future<SignUpResponse> register(SignUpData data) async {
     try {
-      // ignore: non_constant_identifier_names
-      final UserCredential = await _auth.createUserWithEmailAndPassword(
+      final userCredential = await _auth.createUserWithEmailAndPassword(
         email: data.email,
         password: data.password,
       );
-      await UserCredential.user!.updateDisplayName(data.name);
-      return SignUpResponse(null, UserCredential.user);
+      await userCredential.user!.updateDisplayName(data.name);
+      final user = userCredential.user;
+      if (!user!.emailVerified) {
+        await user.sendEmailVerification();
+      }
+      return SignUpResponse(
+        null,
+        userCredential.user,
+      );
     } on FirebaseException catch (e) {
       return SignUpResponse(parseStringToSignUpError(e.code), null);
     }

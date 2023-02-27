@@ -44,4 +44,8 @@ app.*.map.json
 /android/app/release
 
 *.freezed.dart
-    
+
+# keys
+ios/Runner/GoogleService-Info.plist
+ios/Runner/Info.plist
+android/app/google-services.json

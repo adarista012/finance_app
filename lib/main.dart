@@ -59,10 +59,6 @@ Future<void> main() async {
     CURRENCY_PATTERN: '#,##0.00 \u00A4',
     DEF_CURRENCY_CODE: 'Bs.',
   );
-  // SystemChrome.setPreferredOrientations([
-  //   DeviceOrientation.portraitUp,
-  //   DeviceOrientation.portraitDown,
-  // ]);
 
   await injectDependencies();
 

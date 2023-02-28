@@ -23,7 +23,10 @@ class SingUpRepositoryImpl implements SingUpRepository {
         userCredential.user,
       );
     } on FirebaseException catch (e) {
-      return SignUpResponse(parseStringToSignUpError(e.code), null);
+      return SignUpResponse(
+        parseStringToSignUpError(e.code),
+        null,
+      );
     }
   }
 }

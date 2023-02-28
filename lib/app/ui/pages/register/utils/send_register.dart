@@ -24,6 +24,12 @@ Future<void> sendRegisterForm(BuildContext context) async {
         case SignUpError.emailAlreadyInUse:
           content = texts.login.emailAlreadyInUse;
           break;
+        case SignUpError.invalidCredential:
+          content = texts.login.invalidCredential;
+          break;
+        case SignUpError.networkRequestFailed:
+          content = texts.login.networkRequestFailed;
+          break;
         case SignUpError.weakPassword:
           content = texts.login.weakPassword;
           break;

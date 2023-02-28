@@ -8,7 +8,16 @@ class SignUpResponse {
   SignUpResponse(this.error, this.user);
 }
 
-parseStringToSignUpError(String text) {
+enum SignUpError {
+  accountExistsWithDifferentCredential,
+  emailAlreadyInUse,
+  invalidCredential,
+  weakPassword,
+  networkRequestFailed,
+  unknown,
+}
+
+SignUpError parseStringToSignUpError(String text) {
   switch (text) {
     case AppConstants.accountExistsWithDifferentCredential:
       return SignUpError.accountExistsWithDifferentCredential;
@@ -22,14 +31,7 @@ parseStringToSignUpError(String text) {
       return SignUpError.weakPassword;
     case AppConstants.unknown:
       return SignUpError.unknown;
+    default:
+      return SignUpError.unknown;
   }
-}
-
-enum SignUpError {
-  accountExistsWithDifferentCredential,
-  emailAlreadyInUse,
-  invalidCredential,
-  weakPassword,
-  networkRequestFailed,
-  unknown,
 }

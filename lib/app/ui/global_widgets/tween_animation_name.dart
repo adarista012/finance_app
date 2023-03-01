@@ -15,11 +15,13 @@ class TweenAnimationName extends StatelessWidget {
   Widget build(BuildContext context) {
     return isLeft
         ? TweenAnimationBuilder<double>(
-            tween: Tween<double>(begin: 0, end: 10),
+            tween: Tween<double>(
+                begin: MediaQuery.of(context).size.width,
+                end: (MediaQuery.of(context).size.width / 2)),
             duration: const Duration(milliseconds: 1240),
             builder: (_, d, __) {
               return Positioned(
-                left: MediaQuery.of(context).size.width * d * 0.01,
+                right: d,
                 child: Text(
                   text,
                   style: GoogleFonts.ubuntu(
@@ -33,11 +35,13 @@ class TweenAnimationName extends StatelessWidget {
             },
           )
         : TweenAnimationBuilder<double>(
-            tween: Tween<double>(begin: 0, end: 10),
+            tween: Tween<double>(
+                begin: MediaQuery.of(context).size.width,
+                end: (MediaQuery.of(context).size.width / 2)),
             duration: const Duration(milliseconds: 1240),
             builder: (_, d, __) {
               return Positioned(
-                right: MediaQuery.of(context).size.width * d * 0.01,
+                left: d,
                 child: Text(
                   text,
                   style: GoogleFonts.ubuntu(

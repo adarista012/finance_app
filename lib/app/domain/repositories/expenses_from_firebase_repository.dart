@@ -8,10 +8,10 @@ abstract class ExpensesFromFirebaseRepository {
   Future<void> removeExpense(Expense expense);
   Future<void> uploadExpenseToFirebaseFirestore({
     required double currentPrice,
-    required String currentDetail,
+    required String? currentDetail,
     required DateTime dateTime,
-    required String currentImageUrl,
-    required String currentImagePath,
+    required String? currentImageUrl,
+    required String? currentImagePath,
   });
   Future<void> uploadImageToFirebaseStorage({
     required String hash,

@@ -15,6 +15,10 @@ class ExpensesFromFirebaseRepositoryImpl
   @override
   Stream<QuerySnapshot<Object?>> getFirebaseExpenses() {
     final Stream<QuerySnapshot> expensesStream = _firebaseInstance
+        // .where(
+        //   'date',
+        //   isLessThan: '1643673600',
+        // )
         .orderBy(AppConstants.date, descending: true)
         .snapshots();
     return expensesStream;
@@ -34,15 +38,15 @@ class ExpensesFromFirebaseRepositoryImpl
   @override
   Future<void> uploadExpenseToFirebaseFirestore({
     required double currentPrice,
-    required String currentDetail,
+    required String? currentDetail,
     required DateTime dateTime,
-    required String currentImageUrl,
-    required String currentImagePath,
+    required String? currentImageUrl,
+    required String? currentImagePath,
   }) async {
     await _firebaseInstance.add({
       'price': currentPrice,
       'detail': currentDetail,
-      'date': dateTime,
+      'date': dateTime.microsecondsSinceEpoch,
       'imageUrl': currentImageUrl,
       'imagePath': currentImagePath
     }).then((value) {

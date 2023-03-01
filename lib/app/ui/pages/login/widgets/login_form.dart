@@ -23,9 +23,15 @@ class LoginForm extends StatelessWidget {
     return Form(
       key: controller.formKey,
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 8.0,
-        ),
+        padding: defaultTargetPlatform == TargetPlatform.iOS
+            ? const EdgeInsets.symmetric(
+                horizontal: 8.0,
+              ).copyWith(
+                bottom: 8.0,
+              )
+            : const EdgeInsets.symmetric(
+                horizontal: 8.0,
+              ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [

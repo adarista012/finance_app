@@ -1,6 +1,7 @@
 import 'package:finance_app/app/ui/pages/home/controller/home_provider.dart';
 import 'package:finance_app/app/ui/routes/routes.dart';
 import 'package:finance_app/app/utils/app_colors_theme.dart';
+import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -83,13 +84,13 @@ class MyDismissible extends StatelessWidget {
         padding: EdgeInsets.zero,
         child: ListTile(
           title: Text(
-            DateFormat().format(expense.date!),
+            DateFormat().format(expense.date),
             overflow: TextOverflow.ellipsis,
           ),
           trailing: Text(NumberFormat.currency().format(expense.price)),
           // Text('${expense.price.toStringAsFixed(2)} Bs.'),
           subtitle: Text(
-            expense.detail,
+            expense.detail ?? AppConstants.empty,
             overflow: TextOverflow.ellipsis,
           ),
         ),

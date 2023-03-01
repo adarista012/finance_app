@@ -26,7 +26,7 @@ class SettingsPage extends StatelessWidget {
         child: ListView(
           children: [
             Container(
-              height: MediaQuery.of(context).size.height / 4,
+              height: MediaQuery.of(context).size.height / 6,
               width: MediaQuery.of(context).size.width,
               alignment: Alignment.bottomCenter,
               color: AppColorsTheme.kPink,
@@ -38,7 +38,7 @@ class SettingsPage extends StatelessWidget {
                     children: [
                       user?.photoURL != null
                           ? CircleAvatar(
-                              radius: 56,
+                              radius: 45,
                               backgroundImage: NetworkImage(user!.photoURL!),
                               child: user.photoURL == null
                                   ? Text(
@@ -81,7 +81,10 @@ class SettingsPage extends StatelessWidget {
                             user.displayName != AppConstants.empty &&
                                     user.displayName != null
                                 ? user.displayName!
-                                : AppConstants.nickName,
+                                : user.email != AppConstants.empty &&
+                                        user.email != null
+                                    ? user.email!
+                                    : AppConstants.nickName,
                             style: TextStyle(
                               color: AppColorsTheme.white,
                               fontWeight: FontWeight.bold,

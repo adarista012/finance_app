@@ -3,8 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:finance_app/app/domain/models/expense.dart';
 import 'package:finance_app/app/domain/repositories/expenses_from_firebase_repository.dart';
 import 'package:finance_app/app/domain/repositories/picker_image_repository.dart';
+import 'package:finance_app/app/ui/global_controllers/session_controller.dart';
 import 'package:finance_app/app/ui/pages/home/widgets/my_dismissble.dart';
-import 'package:finance_app/app/utils/app_constants.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -38,14 +38,14 @@ class HomeController extends SimpleNotifier {
 
   double _currentPrice = 0;
   double get currentPrice => _currentPrice;
-  String _currentDetail = AppConstants.empty;
-  String get currentDetail => _currentDetail;
+  String? _currentDetail;
+  String? get currentDetail => _currentDetail;
 
-  String _currentImageUrl = AppConstants.empty;
-  String get currentImageUrl => _currentImageUrl;
+  String? _currentImageUrl;
+  String? get currentImageUrl => _currentImageUrl;
 
-  String _currentImagePath = AppConstants.empty;
-  String get currentImagePath => _currentImagePath;
+  String? _currentImagePath;
+  String? get currentImagePath => _currentImagePath;
 
   File? _currentImage;
   File? get currentImage => _currentImage;
@@ -65,12 +65,13 @@ class HomeController extends SimpleNotifier {
   // }
 
   void setCurrentPrice(double doubleAmount) => _currentPrice = doubleAmount;
-  void setCurrentDetail(String currentDetail) => _currentDetail = currentDetail;
-  void setCurrentImageUrl(String currentImageUrl) {
+  void setCurrentDetail(String? currentDetail) =>
+      _currentDetail = currentDetail;
+  void setCurrentImageUrl(String? currentImageUrl) {
     _currentImageUrl = currentImageUrl;
   }
 
-  void setCurrentImagePath(String currentImagePath) {
+  void setCurrentImagePath(String? currentImagePath) {
     _currentImagePath = currentImagePath;
     notify();
   }
@@ -143,14 +144,15 @@ class HomeController extends SimpleNotifier {
       (event) {
         _listDismissibles = event.docs.map(
           (e) {
+            sessionProvider.read.user?.email;
             return MyDismissible(
               expense: Expense(
                 price: e.get('price'),
                 detail: e.get('detail'),
                 category: null,
-                date: (e.get('date') as Timestamp).toDate(),
+                date: DateTime.fromMicrosecondsSinceEpoch(e.get('date')),
                 pictureUrl: null,
-                picturePath: e.get('imagePath'),
+                picturePath: null,
                 id: e.id,
               ),
             );

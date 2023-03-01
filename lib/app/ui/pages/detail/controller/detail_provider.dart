@@ -4,4 +4,3 @@ import 'detail_controller.dart';
 final detailProvider = SimpleProvider(
   (_) => DetailController(),
 );
-  
